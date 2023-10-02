@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 30%;
+            height: 30%;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 90px;
+            color: white;
+        }
+
+        table, tr, td {
+            border: 2px rgb(34, 18, 177) solid;
+        }
+
+        td {
+            background-color: cornflowerblue;
+
+        }
+        .a1 > td {
+            color:yellow;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h1>table 9 宮格</h1>
+    <table>
+        <tr>
+            <td class="a1">1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td class="a2">4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td  class="a3">7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+<hr>
+<h1>table 9 宮格 colspan 水平合併</h1>
+    <table>
+        <tr class="a1">
+            <td colspan="2">1</td>
+            <!-- <td>2</td> -->
+            <td>3</td>
+        </tr>
+        <tr class="a2">
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr class="a3">
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
+    <hr>
+    <h1>table 9 宮格 rowspan 上下合併</h1>
+        <table>
+            <tr class="a1">
+                <td rowspan="3">1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr class="a2">
+                <!-- <td>4</td> -->
+                <td>5</td>
+                <td rowspan="2">6</td>
+            </tr>
+            <tr class="a3">
+                <!-- <td>7</td> -->
+                <td>8</td>
+                <!-- <td>9</td> -->
+            </tr>
+        </table>
+</body>
+
+</html>

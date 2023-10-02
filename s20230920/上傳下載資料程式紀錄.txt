@@ -1,0 +1,119 @@
+
+fatal: unable to auto-detect email address (got 'user@113-14.(none)')
+PS E:\webtest> git config --global user.email "eveliving2021@gmail.com"
+PS E:\webtest> git config --global user.name "evechen1226"
+PS E:\webtest> git commit -m "增加css及table"
+[main ce64186] 增加css及table
+ 1 file changed, 26 insertions(+), 2 deletions(-)
+PS E:\webtest> git status
+On branch main
+nothing to commit, working tree clean
+PS E:\webtest> git log
+commit ce64186c1a3e6949e405d7238e773af4da004a47 (HEAD -> main)
+Author: evechen1226 <eveliving2021@gmail.com>
+Date:   Fri Sep 22 14:41:55 2023 +0800
+
+    增加css及table
+
+commit 2538dbcbcbb740466c0547fb7244ac35eacb3ee6 (test1/main)
+Author: evechen1226 <106503730+evechen1226@users.noreply.github.com>
+Date:   Fri Sep 22 11:00:00 2023 +0800
+
+    修改第二張圖片
+
+commit f75b55217a2e3a28841a7da86a73780c4fd11b06
+Author: evechen1226 <106503730+evechen1226@users.noreply.github.com>
+Date:   Fri Sep 22 10:56:27 2023 +0800
+
+    增加第二張圖片
+
+commit 43e243c08afa09b41b659d2af7106d6284241dc1
+Author: evechen1226 <106503730+evechen1226@users.noreply.github.com>
+Date:   Fri Sep 22 10:53:37 2023 +0800
+
+    增加圖片
+
+commit 344b078d7c1362cd5fa99c9396519d7b6470dafe
+Author: evechen1226 <106503730+evechen1226@users.noreply.github.com>
+Date:   Fri Sep 22 10:36:51 2023 +0800
+
+    第二次變更
+
+commit 1d0f5725a97058d10c6ff07272a0e17987a57fbe
+Author: evechen1226 <106503730+evechen1226@users.noreply.github.com>
+Date:   Fri Sep 22 10:33:35 2023 +0800
+
+    新增index.htmil
+
+commit 56f649acafd128be4b3b1fcfdc714f3040aa02c4
+Author: evechen1226 <106503730+evechen1226@users.noreply.github.com>
+Date:   Fri Sep 22 10:20:22 2023 +0800
+
+    Initial commit
+PS E:\webtest> --l
+位於 線路:1 字元:3
++ --l
++   ~
+'--' 一元運算子後面遺失運算式。
+位於 線路:1 字元:3
++ --l
++   ~
+運算式或陳述式中有未預期的 'l' 語彙基元。
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingExpressionAfterOperator
+ 
+PS E:\webtest> git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+init.defaultbranch=main
+core.editor="C:\Users\user\AppData\Local\Programs\Microsoft VS Code\bin\code" --wait
+user.email=eveliving2021@gmail.com
+user.name=evechen1226
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.test1.url=https://github.com/evechen1226/test.git
+remote.test1.fetch=+refs/heads/*:refs/remotes/test1/*
+PS E:\webtest> git remot -v
+git: 'remot' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote
+PS E:\webtest> git remote -v
+test1   https://github.com/evechen1226/test.git (fetch)
+test1   https://github.com/evechen1226/test.git (push)
+PS E:\webtest> git push test1 main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 575 bytes | 575.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/evechen1226/test.git
+   2538dbc..ce64186  main -> main
+PS E:\webtest>
+ *  已還原歷程記錄 
+
+Windows PowerShell
+著作權 (C) Microsoft Corporation. 著作權所有，並保留一切權利。
+
+PS E:\webtest>
+ *  已還原歷程記錄 
+
+Windows PowerShell
+著作權 (C) Microsoft Corporation. 著作權所有，並保留一切權利。
+
+PS E:\webtest>
