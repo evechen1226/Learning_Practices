@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("09\ gettyimages-590266230_resized.jpg");
+    background-size: cover;
+  }
+
+  .container {
+    display: flex;
+    /* 使用 Flex 布局 */
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    height: 100%;
+
+  }
+
+  table {
+    width: 50%;
+    margin: auto;
+    background-color: rgb(1, 59, 117);
+    opacity: .9;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .th {
+    font-size: 32px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .font-z {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+  }
+  .w-70{
+    width: 60%;
+  }
+  .font-16{
+    font-size: 16px;
+    color: white;
+    text-align: center;
+  }
+  .text-c{
+    text-align: center;
+  }
+  label{
+    color: white;
+  }
+
+</style>
+
+<body>
+  <div class="container">
+    <table>
+      <tr>
+        <td class="w-70">
+          <div class="th">歡迎回來 !</div>
+          <p class="font-16">我們很高興又見到您了!</p>
+          <div class="box">
+            <form action="">
+              <p>
+                <label for="name">&nbsp;&nbsp;電子郵件或電話號碼</label></p>
+                <p></p><input type="text" name="" id="name">
+              </p>
+              <p>
+                <label for="password">密碼</label></p>
+                <p></p><input type="password" name="" id="password">
+              </p>
+              <p>
+                <input type="submit" value="登入">
+              </p>
+
+            </form>
+          </div>
+
+        </td>
+        <td class="text-c"><img src="./QR.png" alt="" srcset="">
+          <p class="font-z">使用 QR Code 登入</p>
+          <p class="font-16">用 Discord 行動應用程式 對此掃描<br>就能登入</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>
