@@ -25,17 +25,29 @@
 
         fieldset {
             margin: auto;
-            border: 2px groove (internal value);
+            border: 2px;
+            border-color: royalblue;
+            background-color: lightgoldenrodyellow;
+            border-radius: 5px;
         }
 
         legend {
-            display: block;
-            padding-inline-start: 2px;
-            padding-inline-end: 2px;
-            border-width: initial;
-            border-style: none;
-            border-color: initial;
-            border-image: initial;
+            background-color: rgb(250, 121, 0);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin: auto;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .submit {
+            color: brown;
+            font-weight: bold;
+            margin: auto;
+        }
+        .submit-text {
+            text-align: center;
         }
     </style>
 </head>
@@ -43,44 +55,54 @@
 <body>
     <div class="container">
         <fieldset class="w-30">
+
+            <legend>HR報表</legend>
+
             <p>
-                <legend>HR報表</legend>
-            </p>
-            <p><label for="name">姓名</label>
+                <label for="name">姓名&nbsp;</label>
                 <input type="text" name="my_name" id="">
             </p>
-            <p><label for="name">電話</label>
+            <p>
+                <label for="name">電話&nbsp;</label>
                 <input type="text" name="my_mobile" id="">
             </p>
-            <p><label for="name">地址</label>
+            <p>
+                <label for="name">地址&nbsp;</label>
                 <input type="text" name="my_address" id="">
             </p>
             <p>
+            <form>
+                <label for="name">email</label>
+                <input type="email" name="my_email_address" id="email">
+                <input class="submit-color" type="submit" value="送出">
+            </form>
+            </p>
+            <p>
+                <label for="select">姓別&nbsp;</label>
                 <select name="" id="">
-                    <option value="">請選擇</option>
-                    <option value="s1">s1</option>
-                    <option value="s2">s2</option>
-                    <option value="s3">s3</option>
-                    <option value="s4">s4</option>
-                    <option value="s5">s5</option>
+                    <option value="">姓別</option>
+                    <option value="s1">男</option>
+                    <option value="s2">女</option>
+                    <option value="s3">不提供</option>
                 </select>
             </p>
             <p>
+                <label for="item0">學歷</label>
                 <input type="radio" name="my_radio" id="">
-                <label for="item1">item1</label>
+                <label for="item1">高中</label>
                 <input type="radio" name="my_radio" id="">
-                <label for="item2">item2</label>
+                <label for="item2">大學</label>
                 <input type="radio" name="my_radio" id="">
-                <label for="item3">item3</label>
+                <label for="item3">碩士</label>
             </p>
             <p>
-
+                <label for="check">語言</label>
                 <input type="checkbox" name="mycheckbox[]" id="check1">
-                <label for="check1">item1</label>
+                <label for="check1">中文</label>
                 <input type="checkbox" name="mycheckbox[]" id="check2">
-                <label for="check2">item2</label>
+                <label for="check2">英文</label>
                 <input type="checkbox" name="mycheckbox[]" id="check3">
-                <label for="check3">item3</label>
+                <label for="check3">台語</label>
             </p>
             <p>
                 <label for="birthday">生日</label>
@@ -89,17 +111,18 @@
 
             <p>
                 <label for="ps">備註</label>
-            
+            </p>
+
             <p> <textarea name="mytextarea" id="" cols="80" rows="10">
  hello 123
  hello 456                
             </textarea>
 
             </p>
-
-            <input type="reset" value="重新整理">
-            <input type="submit" value="送出">
-
+            <form class="submit-text">
+                <input class="submit" type="reset" value="重新整理">
+                <input class="submit" type="submit" value="送出">
+            </form>
 
         </fieldset>
 
