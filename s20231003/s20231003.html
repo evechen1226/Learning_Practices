@@ -11,16 +11,13 @@
             color: #055daf;
         }
 
-        .container {
-            /* background-color:aliceblue; */
-        }
-
         table {
             /* width: 600px; */
+            background-color: antiquewhite;
             border-collapse: collapse;
             text-align: center;
-            font-size: 16px;
-            color: cornflowerblue;
+            font-size: 20px;
+            color: darkblue;
             margin: auto;
         }
 
@@ -28,150 +25,220 @@
         tr,
         td {
             border: 1.5px rgb(10, 54, 138) solid;
-            height: 100px;
+            /* height: 100px; */
         }
 
-
-        .a1>td {
-            color: aliceblue;
-
+        td {
+            vertical-align: top;
         }
 
-        .r {
-            color: aliceblue;
-            background-color: white;
-        }
-
-        .red {
+        .text-red {
             font-size: 20px;
             color: red;
             font-weight: bold;
         }
 
-        .black {
+        .text-black {
             font-size: 20px;
             color: black;
             font-weight: bold;
         }
 
-        .east {
-            height: 150px;
-            width: 200px;
-
-        }
-        .w-30{
+        .w-30 {
             width: 30%;
         }
-        .h-80{
+
+        .w-60 {
+            width: 60%;
+        }
+
+        .h-80 {
             height: 80vh;
         }
-        .h-60{
+
+        .h-60 {
             height: 60vh;
+        }
+
+        .mark {
+            width: 80%;
+            /* background-color: antiquewhite; */
+            display: flex;
+            margin: auto;
+        }
+
+        .mark-1 {
+            padding: 5px;
+            margin: auto;
+        }
+
+        .bg-color {
+            background-color: rgb(224, 247, 255);
+        }
+
+        .td-padding {
+            padding: 10px;
+        }
+
+        .bg-th-color {
+            background-color: rgb(248, 242, 187);
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h3>康乃爾筆記</h3>
+        <div class="mark" id="top">
+            <div class="mark-1"><a href="#cornell-notes">
+                    <h4>康乃爾筆記
+                </a></h4>
+            </div>
+            <div class="mark-1"><a href="#utokyo-notes">
+                    <h4>東大筆記
+                </a></h4>
+            </div>
+            <div class="mark-1"><a href="#mckinsey-notes">
+                    <h4>麥肯錫筆記
+                </a></h4>
+            </div>
+            <div class="mark-1"><a href="#bmg">
+                    <h4>獲利世代
+                </a></h4>
+            </div>
+
+        </div>
+        <h3 id="cornell-notes">康乃爾筆記</h3>
         <table class="h-80">
             <tr>
-                <td class="w-30 h-60">
-                    <div class="black">B</div>
-                    <div class="red">整理</div>
+                <td class="w-30 h-60 td-padding">
+                    <div class="text-black">B</div>
+                    <div class="text-red">整理</div>
 
                     善用標記
                     →建立自已的筆記規則
                 </td>
-                <td class="h-60">
-                    <div class="black">A</div>
-                    <div class="red">筆記</div>
+                <td class="h-60 td-padding">
+                    <div class="text-black">A</div>
+                    <div class="text-red">筆記</div>
 
                     筆記法
                     使用顏色分類重點
                 </td>
             </tr>
-            <tr>
+            <tr class="bg-color td-padding">
                 <td colspan="2">
-                    <div class="black">C</div>
-                    <div class="red">總結</div>
+                    <div class="text-black">C</div>
+                    <div class="text-red">總結</div>
 
                     筆記基礎原則：標示、不抄、留白
                 </td>
                 <!-- <td>D</td> -->
             </tr>
         </table>
-        <h3>東大筆記</h3>
-        <table >
-            <tr >
-                <td class="east">
-                    <div class="black">A</div>
-                    <div class="red">筆記</div>
+
+        <h3><a href="#top">TOP</a></h3>
+        <hr>
+        <h3 id="utokyo-notes">東大筆記</h3>
+        <table>
+            <tr>
+                <td class="w-30h-80 td-padding">
+                    <div class="text-black">A</div>
+                    <div class="text-red">筆記</div>
 
                     筆記法使用顏色分類重點
                 </td>
-                <td class="east">
-                    <div class="black">B</div>
-                    <div class="red">整理</div>
+                <td class="w-30h-80 td-padding">
+                    <div class="text-black">B</div>
+                    <div class="text-red">整理</div>
 
                     善用標記
                     →建立自已的筆記規則
                 </td>
-                <td class="east">
-                    <div class="black">C</div>
-                    <div class="red">總結</div>
+                <td class="w-30 h-80 bg-color td-padding">
+                    <div class="text-black">C</div>
+                    <div class="text-red">總結</div>
 
                     筆記基礎原則：標示、不抄、留白
                 </td>
-    
-    </tr>
 
-    </table>
-    <h3>麥肯錫筆記</h3>
-    <table>
-        <tr>
-            <td colspan="3">A</td>
-            <!-- <td>B</td> -->
-            <!-- <td>C</td> -->
-        </tr>
-        <tr>
-            <td>D</td>
-            <td>E</td>
-            <td>F</td>
-        </tr>
+            </tr>
 
-    </table>
-    <h3>獲利世代</h3>
-    <table>
-        <tr>
-            <td rowspan="2">1-1</td>
-            <td>1-2</td>
-            <td rowspan="2" colspan="2">1-3</td>
-            <!-- <td rowspan="2">1-4</td> -->
-            <td>1-5</td>
-            <td rowspan="2">1-6</td>
-        </tr>
-        <tr>
-            <!-- <td>1-1</td> -->
-            <td>2-2</td>
-            <!-- <td>2-3</td> -->
-            <!-- <td>2-4</td> -->
-            <td>2-5</td>
-            <!-- <td>2-6</td> -->
-        </tr>
-        <tr>
-            <td colspan="3">3-1</td>
-            <!-- <td>3-2</td> -->
-            <!-- <td>3-3</td> -->
-            <td colspan="3">3-4</td>
-            <!-- <td>3-5</td> -->
-            <!-- <td>3-6</td> -->
-        </tr>
+        </table>
+        <h3><a href="#top">TOP</a></h3>
+        <hr>
+        <h3 id="mckinsey-notes">麥肯錫筆記</h3>
+        <table>
+            <tr>
+                <td class="bg-th-color td-padding " colspan="3">標題</td>
+                <!-- <td>B</td> -->
+                <!-- <td>C</td> -->
+            </tr>
+            <tr>
+                <td class="w-30 h-80 td-padding">
+                    <div class="text-black">A</div>
+                    <div class="text-red">筆記</div>
 
+                    筆記法使用顏色分類重點
+                </td>
+                <td class="w-30 h-80 td-padding">
+                    <div class="text-black">B</div>
+                    <div class="text-red">整理</div>
 
+                    善用標記
+                    →建立自已的筆記規則
+                </td>
+                <td class="w-30 h-80 bg-color td-padding">
+                    <div class="text-black">C</div>
+                    <div class="text-red">總結</div>
 
-    </table>
+                    筆記基礎原則：標示、不抄、留白
+                </td>
+            </tr>
+
+        </table>
+        <h3><a href="#top">TOP</a></h3>
+        <hr>
+
+        <h3 id="bmg">獲利世代</h3>
+        <table class="w-60 h-60  text-black">
+            <tr>
+                <td class="td-padding" rowspan="2">關鍵合作夥伴<br>(Key Partnership, KP)
+
+                </td>
+                <td class="td-padding">關鍵活動<br>(Key Activities, KA)
+                </td>
+                <td class="td-padding" rowspan="2" colspan="2">價值主張<br>(Value Propositions, VP)
+                </td>
+                <!-- <td rowspan="2">1-4</td> -->
+                <td class="td-padding">顧客關係<br>(Customer Relationships, CR)
+                </td>
+                <td class="td-padding" rowspan="2">目標客層<br>(Customer Segments, CS)
+                </td>
+            </tr>
+            <tr>
+                <!-- <td>1-1</td> -->
+                <td class="td-padding">關鍵資源<br>(Key Resources, KR)
+                </td>
+                <!-- <td>2-3</td> -->
+                <!-- <td>2-4</td> -->
+                <td class="td-padding">通路<br>(Channels, CH)
+                </td>
+                <!-- <td>2-6</td> -->
+            </tr>
+            <tr>
+                <td class="td-padding" colspan="3">成本結構<br>(Cost Structure, C$)
+                </td>
+                <!-- <td>3-2</td> -->
+                <!-- <td>3-3</td> -->
+                <td class="td-padding" colspan="3">關鍵合作夥伴<br>(Key Partnership, KP)
+                </td>
+                <!-- <td>3-5</td> -->
+                <!-- <td>3-6</td> -->
+            </tr>
+        </table>
+
     </div>
+    <h3><a href="#top">TOP</a></h3>
 </body>
 
 </html>
