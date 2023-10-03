@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
+        .text-red {
+            color: red;
+        }
     </style>
 </head>
 
@@ -36,7 +38,7 @@
         </p>
     </div>
     <div class="container">
-        <h3>
+        <h3 class="text-red">
             下拉式選單
         </h3>
         <p>
@@ -51,33 +53,64 @@
         </p>
     </div>
     <div class="container">
-        <h3>
+        <h3 class="text-red">
             單選 radio
         </h3>
         <p>
-            <input type="radio" name="" id="">
+            <input type="radio" name="my_radio" id="">
             <label for="item1">item1</label>
-            <input type="radio" name="" id="">
-            <label for="item2">item2</label> 
-            <input type="radio" name="" id="">
+            <input type="radio" name="my_radio" id="">
+            <label for="item2">item2</label>
+            <input type="radio" name="my_radio" id="">
             <label for="item3">item3</label>
         </p>
     </div>
     <div class="container">
-        <h3>
+        <h3 class="text-red">
             多選 checkbox
         </h3>
         <p>
-            
-            <input type="checkbox" name="" id="">
-            <label for="item1">item1</label>
-            <input type="checkbox" name="" id="">
-            <label for="item2">item2</label> 
-            <input type="checkbox" name="" id="">
-            <label for="item3">item3</label>
+
+            <input type="checkbox" name="mycheckbox[]" id="check1">
+            <label for="check1">item1</label>
+            <input type="checkbox" name="mycheckbox[]" id="check2">
+            <label for="check2">item2</label>
+            <input type="checkbox" name="mycheckbox[]" id="check3">
+            <label for="check3">item3</label>
         </p>
     </div>
+    <div class="container">
+        <h3>重新整理rest</h3>
+        <form action="">
+            <p>
+                <input type="reset" value="重新整理">
 
+            </p>
+        </form>
+    </div>
+    <div class="container">
+        <h3>送出submit</h3>
+        <form action="">
+            <p>
+                <input type="submit" value="送出">
+            </p>
+        </form>
+    </div>
+    <div class="container">
+        <h3>密碼password</h3>
+        <form action="">
+            <input type="password" name="" id="">
+        </form>
+    </div>
+    <div class="container">
+        <h3>留言版textarea</h3>
+        <form action="">
+            <textarea name="mytextarea" id="" cols="80" rows="10">
+hello 123
+          hello 456                
+            </textarea>
+        </form>
+    </div>
 
 </body>
 
