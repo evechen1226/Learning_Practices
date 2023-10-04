@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
         .text-red {
-            color: red;
+            color: rgb(1, 13, 117);
         }
 
         .box {
@@ -27,12 +27,13 @@
             margin: auto;
             border: 2px;
             border-color: royalblue;
-            background-color: lightgoldenrodyellow;
+            background-color: rgb(210, 239, 250);
             border-radius: 5px;
+            padding-bottom: 20px;
         }
 
         legend {
-            background-color: rgb(250, 121, 0);
+            background-color: rgb(0, 137, 250);
             color: white;
             padding: 5px 10px;
             border-radius: 5px;
@@ -41,11 +42,25 @@
             font-size: 20px;
         }
 
+
         .submit {
-            color: brown;
+            color: rgb(42, 61, 165);
             font-weight: bold;
             margin: auto;
+            width: 30%;
+            height: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            background-color: rgb(255, 187, 85);
+            border-radius: 10px;
+            border: none;
+
         }
+
+        .submit:hover {
+            background-color: rgb(248, 250, 150);
+        }
+
         .submit-text {
             text-align: center;
         }
@@ -54,79 +69,79 @@
 
 <body>
     <div class="container">
-        <form>
-        <fieldset class="w-30">
+        <form method="post" enctype="multipart/form-data" action="handler.php">
+            <fieldset class="w-30">
 
-            <legend>HR報表</legend>
+                <legend>HR報表</legend>
 
-            <p>
-                <label for="name">姓名&nbsp;</label>
-                <input type="text" name="my_name" id="">
-            </p>
-            <p>
-                <label for="name">電話&nbsp;</label>
-                <input type="text" name="my_mobile" id="">
-            </p>
-            <p>
-                <label for="name">地址&nbsp;</label>
-                <input type="text" name="my_address" id="">
-            </p>
-            <p>
-            <div>
-                <label for="name">email</label>
-                <input type="email" name="my_email_address" id="email">
-                <input class="submit-color" type="submit" value="送出">
-            </div>
-            </p>
-            <p>
-                <label for="select">姓別&nbsp;</label>
-                <select name="" id="">
-                    <option value="">姓別</option>
-                    <option value="s1">男</option>
-                    <option value="s2">女</option>
-                    <option value="s3">不提供</option>
-                </select>
-            </p>
-            <p>
-                <label for="item0">學歷</label>
-                <input type="radio" name="my_radio" id="">
-                <label for="item1">高中</label>
-                <input type="radio" name="my_radio" id="">
-                <label for="item2">大學</label>
-                <input type="radio" name="my_radio" id="">
-                <label for="item3">碩士</label>
-            </p>
-            <p>
-                <label for="check">語言</label>
-                <input type="checkbox" name="mycheckbox[]" id="check1">
-                <label for="check1">中文</label>
-                <input type="checkbox" name="mycheckbox[]" id="check2">
-                <label for="check2">英文</label>
-                <input type="checkbox" name="mycheckbox[]" id="check3">
-                <label for="check3">台語</label>
-            </p>
-            <p>
-                <label for="birthday">生日</label>
-                <input type="date" id="birthday" name="birthday">
-            </p>
+                <p>
+                    <label for="name">姓名&nbsp;</label>
+                    <input type="text" name="my_name" id="">
+                </p>
+                <p>
+                    <label for="name">電話&nbsp;</label>
+                    <input type="text" name="my_mobile" id="">
+                </p>
+                <p>
+                    <label for="name">地址&nbsp;</label>
+                    <input type="text" name="my_address" id="">
+                </p>
+                <p>
+                <div>
+                    <label for="name">email</label>
+                    <input type="email" name="my_email_address" id="email">
+                    <input class="submit-color" type="submit" value="送出">
+                </div>
+                </p>
+                <p>
+                    <label for="select">姓別&nbsp;</label>
+                    <select name="" id="">
+                        <option value="">姓別</option>
+                        <option value="s1">男</option>
+                        <option value="s2">女</option>
+                        <option value="s3">不提供</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="item0">學歷</label>
+                    <input type="radio" name="my_radio" id="">
+                    <label for="item1">高中</label>
+                    <input type="radio" name="my_radio" id="">
+                    <label for="item2">大學</label>
+                    <input type="radio" name="my_radio" id="">
+                    <label for="item3">碩士</label>
+                </p>
+                <p>
+                    <label for="check">語言</label>
+                    <input type="checkbox" name="mycheckbox[]" id="check1">
+                    <label for="check1">中文</label>
+                    <input type="checkbox" name="mycheckbox[]" id="check2">
+                    <label for="check2">英文</label>
+                    <input type="checkbox" name="mycheckbox[]" id="check3">
+                    <label for="check3">台語</label>
+                </p>
+                <p>
+                    <label for="birthday">生日</label>
+                    <input type="date" id="birthday" name="birthday">
+                </p>
+                <input type="file" name="upfile">
+                <p>
+                    <label for="ps">備註</label>
+                </p>
 
-            <p>
-                <label for="ps">備註</label>
-            </p>
-
-            <p> <textarea name="mytextarea" id="" cols="80" rows="10">
+                <p> <textarea name="mytextarea" id="" cols="80" rows="10">
  hello 123
  hello 456                
             </textarea>
 
-            </p>
-            <div class="submit-text">
-                <input class="submit" type="reset" value="重新整理">
-                <input class="submit" type="submit" value="送出">
-            </div>
+                </p>
+                <div class="submit-text">
+                    <input class="submit" type="reset" value="重新整理">
+                    <input class="submit" type="submit" value="送出">
+                </div>
 
-        </fieldset>
-    </form>
+            </fieldset>
+        </form>
 
 </body>
 
