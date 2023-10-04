@@ -63,6 +63,27 @@
   label{
     color: white;
   }
+  input{
+    margin: auto;
+    text-align: center;
+  }
+  .input-text{
+    width: 100%;
+    height: 45px;
+  }
+  .input-submit{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(216, 119, 8);
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    
+  }
+  .font-12{
+    font-size: 12px;
+    color: cyan;
+  }
 
 </style>
 
@@ -77,14 +98,15 @@
             <form action="">
               <p>
                 <label for="name">&nbsp;&nbsp;電子郵件或電話號碼</label></p>
-                <p></p><input type="text" name="" id="name">
+                <p></p><input class="input-text" type="text" name="" id="name">
               </p>
               <p>
                 <label for="password">密碼</label></p>
-                <p></p><input type="password" name="" id="password">
+                <p></p><input class="input-text" type="password" name="" id="password">
               </p>
+              <p class="font-12">忘記密碼</p>
               <p>
-                <input type="submit" value="登入">
+                <input class="input-submit" type="submit" value="登入">
               </p>
 
             </form>
