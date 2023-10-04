@@ -14,11 +14,66 @@
         color: red;
         font-size: 30px;
     }
+
+    body {
+        background-image: url("./D.png");
+        background-repeat: no-repeat;
+
+    }
+
+    /* background-image 設定 */
+    .box {
+        background-image: url("http://picsum.photos/id/12/300/200");
+        width: 600px;
+        height: 600px;
+        background-repeat: repeat;
+    }
+/* 用 background-imge 做連結時，
+要設background-size及width、height，
+圖片才會顯示，圖片會依width，比例縮放 */
+    .clickdiv{
+        background-image: url("L.jpg");
+        background-size: 150px 200px;
+        background-color: antiquewhite;
+        width: 150px;
+        height: 200px;
+    }
+    .aimg{
+        width: 150px;
+        height: 200px;
+    }
 </style>
 
 <body>
-<!-- 行內載入 -->
+    <!-- 行內載入 -->
     <h1 style="color: orange;">CSS</h1>
+    <!-- img 圖片 -->
+    <div class="container">
+        <h3>img</h3>
+        <img src="http://picsum.photos/id/10/600/400" alt="" srcset="">
+    </div>
+    <!-- background-image 圖片 -->
+    <div class="container">
+        <h3>background-image</h3>
+        <div class="box">
+
+        </div>
+        <!-- 在 css 用 background-imge 做連結 -->
+        <div class="container">
+            <h3>link bg-image</h3>
+            <a href="">
+                <div class="clickdiv"></div>
+            </a>
+        </div>
+        <!-- 在 body 內使用 img 做連結 -->
+        <div class="container">
+            <h3>link img</h3>
+            <a href="">
+                <img class="aimg"  src="./A.jpg" alt="" srcset="">
+            </a>
+        </div>
+    </div>
+
 </body>
 
 </html>
