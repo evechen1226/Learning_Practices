@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 80%;
+            height: 90vh;
+            margin: auto;
+            background-color: lightpink;
+            background-image: url(./img/Winnie-the-Pooh-500.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .box-2 {
+            width: 20%;
+            background-color: lightgoldenrodyellow;
+            background-image: url(./img/Winnie-the-Pooh-500.jpg);
+            background-repeat: no-repeat;
+
+            background-size: 100%;
+        }
+
+        .box-3 {
+            background-color: lightblue;
+            background-image: url(./img/Winnie-the-Pooh-500.jpg);
+            background-repeat: no-repeat;
+            background-position: 100% 100%;
+            border: 1px solid;
+        }
+
+        .box-4 {
+            background-color: lightseagreen;
+            background-image: url(./img/Winnie-the-Pooh-500.jpg), url(./img/pooh-500.jpg);
+            background-repeat: no-repeat;
+            background-position: left top, right bottom;
+            /* opacity: 0.3;   →會影響到全部的DIV的內容 */
+            margin: auto;
+        }
+
+        table,
+        tr,
+        td {
+            border: 1px solid;
+            
+
+        }
+
+        table {
+            width: 60%;
+            height: 50vh;
+            
+        }
+
+        td {
+            height: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container box-1">
+    </div>
+    <div class="container box-2">
+    </div>
+    <div class="container box-3">
+    </div>
+    <div class="container box-4">
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+
+
+</body>
+
+</html>
