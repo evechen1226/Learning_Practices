@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    a:hover {
+        color: lightcoral;
+        transition-duration: 0.5s;
+        text-decoration: none;
+        font-size: larger;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .nav {
+        display: flex;
+        text-align: center;
+        font-size: large;
+        font-weight: bold;
+        font-family: Helvetica, sans-serif;
+        justify-content: center;
+
+
+    }
+
+    .nav>div {
+        padding: 30px;
+    }
+
+    .container {
+        width: 600px;
+        height: 50vh;
+        margin: auto;
+        background-color: lightgoldenrodyellow;
+        background-image: url("../s20231011/img/pooh-500.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 30px;
+    }
+
+    .container:hover {
+        background-image: url("../s20231011/img/Winnie-the-Pooh-500.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow:  0 0 30px #ffb24e inset;
+        background-color:rgb(250, 242, 132);
+        transition-duration: 0.5s;
+     /* box-shadow:  0 0 30px #585146; 同一種效果，只能出現一次 */
+
+    }
+</style>
+
+<body>
+
+    <div class="nav">
+        <div class="home"><a href="">HOME</a></div>
+        <div class="about"><a href="">ABOUT</a></div>
+        <div class="page"><a href="">PAGE</a></div>
+
+    </div>
+    <div class="container">
+
+    </div>
+
+    <br>
+    <hr><br>
+
+
+</body>
+
+</html>
