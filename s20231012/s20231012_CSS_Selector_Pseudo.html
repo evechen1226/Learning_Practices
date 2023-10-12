@@ -19,21 +19,22 @@
     }
 
     .nav {
+        height: 8;
         display: flex;
         text-align: center;
         font-size: large;
         font-weight: bold;
         font-family: Helvetica, sans-serif;
         justify-content: center;
-
-
+        background-color: rgb(221, 241, 253);
+        margin-bottom: 10px;
     }
 
     .nav>div {
         padding: 30px;
     }
 
-    .container {
+    .box {
         width: 600px;
         height: 50vh;
         margin: auto;
@@ -44,15 +45,23 @@
         border-radius: 30px;
     }
 
-    .container:hover {
+    .box:hover {
         background-image: url("../s20231011/img/Winnie-the-Pooh-500.jpg");
         background-repeat: no-repeat;
         background-position: center;
-        box-shadow:  0 0 30px #ffb24e inset;
-        background-color:rgb(250, 242, 132);
+        box-shadow: 0 0 30px #ffb24e inset;
+        background-color: rgb(250, 242, 132);
         transition-duration: 0.5s;
-     /* box-shadow:  0 0 30px #585146; 同一種效果，只能出現一次 */
+        /* box-shadow:  0 0 30px #585146; 同一種效果，只能出現一次 */
+    }
 
+    input:focus {
+        background-color: #ffb24e;
+
+    }
+
+    form {
+        text-align: center;
     }
 </style>
 
@@ -65,7 +74,20 @@
 
     </div>
     <div class="container">
+        <div class="box"></div>
+    </div>
 
+    <div class="container">
+        <form action="">
+            <p>
+                <label for="">name</label>
+                <input type="text" name="" id="">
+            </p>
+            <p>
+                <label for="">mobile</label>
+                <input type="text" name="" id="">
+            </p>
+        </form>
     </div>
 
     <br>
