@@ -63,6 +63,41 @@
     form {
         text-align: center;
     }
+
+    table,
+    tr,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    table {
+        width: 100%;
+
+    }
+
+    /* th,
+    td {
+        width: 20%;
+    } */
+
+    .money {
+        text-align: right;
+    }
+
+    .money::before {
+        content: "$";
+    }
+
+    .money::after {
+        content: "元";
+    }
+
+    .status::after {
+        content: "%";
+    }
 </style>
 
 <body>
@@ -90,6 +125,34 @@
         </form>
     </div>
 
+    <div class="container">
+        <table>
+            <tr>
+                <th width="15%">name</th>
+                <th width="20%">bonus</th>
+                <th width="20%">績效成長</th>
+                <th>備註</th>
+            </tr>
+            <tr>
+                <td>Amy</td>
+                <td class="money">5000</td>
+                <td class="status">10</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td class="money">1000</td>
+                <td class="status">5</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Cat</td>
+                <td class="money">9000</td>
+                <td class="status">30</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
     <br>
     <hr><br>
 
