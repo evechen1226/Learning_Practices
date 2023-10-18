@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin: auto;
+        }
+
+        table,
+        tr,
+        td {
+            /* border: 1px solid black; */
+            border-collapse: none;
+            /* text-align: center; */
+        }
+
+        table {
+            width: 30%;
+            margin: auto;
+        }
+
+        td {
+            height: 35px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        input[type='file'] {
+            margin-left: 130px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container text-center">
+        <h2>Edit</h2>
+        <form action="" enctype="multipart/form-data"></form>
+        <table>
+            <tr>
+                <td><label for="name">name&nbsp;</label>
+                    <input type="text" name="name" id="name" value="amy">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">email&nbsp;</label>
+                    <input type="text" name="email" id="mobile" value="t1@abc.com">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="name">mobile&nbsp;</label>
+                    <input type="text" name="mobile" id="mobile" value="0911-111-111">
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="pic"></label>
+                    <input type="file" name="file" id="file">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="submit" id="submit"></td>
+            </tr>
+        </table>
+        </form>
+    </div>
+
+</body>
+
+</html>
