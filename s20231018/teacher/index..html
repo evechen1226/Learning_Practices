@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+</head>
+<body>
+        
     <style>
-       * {
+        * {
             font-family: Arial, Helvetica, sans-serif;
             text-decoration: none;
         }
@@ -20,6 +22,19 @@
         h3 {
             text-align: center;
             font-size: 36px;
+        }
+
+        h4 {
+            text-align: center;
+            /* text-decoration: none; →使用無效 */
+            /* color:green; →使用無效 */
+        }
+        a:hover{
+            color:rgb(255, 115, 0);
+        }
+
+        .add {
+            font-size: 24px;
         }
 
         table,
@@ -69,6 +84,10 @@
             /* text-decoration: none; →使用無效 */
             /* color:green; →使用無效 */
         }
+
+        a{
+            color:black
+        }
         a:hover{
             color:rgb(255, 115, 0);
         }
@@ -81,59 +100,70 @@
             font-size: 24px;
             
         }
+        th{
+            height: 40px;
+            font-size: 20px;
+            background-color: lightskyblue;;
+        }
     </style>
 </head>
 
 <body>
     <nav>
         <div class="container">
-         <a href="./student.html">學生</a>
-         <a href="../teacher/teacher.html">老師</a>
+            <a href="../student/index.html">學生</a>
+            <a href="./create.html">老師</a>
 
         </div>
         
     </nav>
 
     <div class="container text-right">
-        <h3>studernt list</h3>
+        <h3>teacher list</h3>
 
         <p class="add"><a href="./create.html"><input type="submit" name="add" value="Add"></a></p>
         <table>
             <tr>
                 <th>id </th>
                 <th>name</th>
+                <th>mail</th>
                 <th>mobile</th>
                 <th>pic</th>
                 <th>修改/刪除</th>
             </tr>
             <tr>
                 <td>1</td>
-                <td><a href="../edit.html?id=1">amy</a></td>
-                <td>0911-111-111</td>
-                <td><img src="https://picsum.photos/id/35/100/100" alt="" srcset=""> amg.jpg </td>
+                <td><a href="./edit.html?id=1">Davd</a></td>
+                <td>t1@abc.com</td>
+                <td>0966-666-666</td>
+                <td><img src="https://picsum.photos/id/141/100/100" alt="" srcset=""> amg.jpg </td>
                 <td class="text-green"><a href="./edit.html?id=1">修改</a>&nbsp;/&nbsp;<a href="./delete.html?id=1">刪除</a>
                 </td>
             </tr>
             <tr>
                 <td>2</td>
-                <td><a href="../edit.html?id=2">bob</a></td>
-                <td>0922-222-222</td>
-                <td><img src="https://picsum.photos/id/36/100/100" alt="" srcset=""> bob.jpg</td>
+                <td><a href="./edit.html?id=2">Eson</a></td>
+                <td>t1@abc.com</td>
+                <td>0955-555-555</td>
+                <td><img src="https://picsum.photos/id/142/100/100" alt="" srcset=""> bob.jpg</td>
                 <td class="text-green"><a href="./edit.html?id=2">修改</a>&nbsp;/&nbsp;<a href="./delete.html?id=2">刪除</a>
                 </td>
             </tr>
             <tr>
                 <td>3</td>
-                <td><a href="../edit.html?id=3">cat</a></td>
-                <td>0933-333-333</td>
-                <td><img src="https://picsum.photos/id/37/100/100" alt="" srcset=""> cat.jpg</td>
+                <td><a href="../edit.html?id=3">Sam</a></td>
+                <td>t1@abc.com</td>
+                <td>0977-777-777</td>
+                <td><img src="https://picsum.photos/id/143/100/100" alt="" srcset=""> cat.jpg</td>
                 <td class="text-green"><a href="./edit.html?id=3">修改</a>&nbsp;/&nbsp;<a href="./delete.html?id=3">刪除</a>
                 </td>
             </tr>
 
         </table>
-        <h4><a href="../index.html">回到總表</a></h4>
+        <h4 ><a href="../index.html">回到總表</a></h4>
     </div>
 </body>
 
+</html>
+</body>
 </html>
