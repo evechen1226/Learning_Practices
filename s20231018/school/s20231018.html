@@ -1,11 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        span {
+            width: 50px;
+            height: 50px;
+            background-color: lightgoldenrodyellow;
+        }
+
+        .display-block {
+            display: block;
+        }
+
+        .display-inline {
+            display: inline;
+            background-color: lightgoldenrodyellow;
+            width: 50px;
+            height: 50px;
+        }
+
+        .display-inline-block {
+            display: inline-block;
+            background-color: lightgoldenrodyellow;
+            width: 50px;
+            height: 50px;
+        }
+
+        a {
+            width: 50px;
+            height: 50px;
+            background-color: lightblue;
+        }
+
+        table,
+        tr,
+        td {
+            
+            text-align: center;
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: auto;
+        }
+        table {
+            width: 90%;
+
+        }
+        td:nth-child(1){
+            font-size: 24px;
+        }
+        td{
+            padding-bottom: 20px;
+        }
+        
+    </style>
 </head>
+
 <body>
-    
+    <h3>black</h3>
+    <h3>可以調整大小</h3>
+    <h3>可以換行</h3>
+
+    <h4>span</h4>
+    <span>這是span</span>
+    <span>111</span>
+    <span>222</span>
+    <span class="display-block">3333</span>
+    <hr>
+    <a href="">這是 a</a>
+    <a href="">aaa</a>
+    <a class="display-block" href="">bbb</a>
+    <a href="">ccc</a>
+
+    <table>
+        <tr>
+            <td>block</td>
+            <td>可調大小 <br> 可以換行</td>
+            <td>
+                <h3>原始----用 span 舉例</h3>
+                Lorem ipsum, dolor sit amet <span> consectetur </span> adipisicing elit. Nemo, quos. <br>
+                <h3>display:block</h3>
+                <h4 class="display-block">Lorem ipsum,</h4>
+                Lorem ipsum, dolor sit amet <span class="display-block"> consectetur </span> adipisicing elit. Nemo,
+                quos.
+            </td>
+        </tr>
+        <tr>
+            <td>inline</td>
+            <td>不可調大小 <br> 不可以換行</td>
+            <td>
+                <h3>原始----用 h4 舉例</h3>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, quos. <br>
+                <h3>inline</h3>
+                <h4 class="display-inline">Lorem ipsum,</h4> dolor sit amet consectetur adipisicing elit. Nemo, quos.
+            </td>
+        </tr>
+        <tr>
+            <td>inline-block;</td>
+            <td>可調大小 <br> 不可以換行</td>
+            <td>
+                <h3>原始----用 h4 舉例</h3>
+                <h4>Lorem ipsum,</h4> dolor sit amet consectetur adipisicing elit. Nemo, quos. <br>
+                <h3>display: inline-block</h3>
+                <h4 class="display-inline-block">Lorem ipsum,</h4> dolor sit amet consectetur adipisicing elit. Nemo,
+                quos.
+            </td>
+        </tr>
+
+    </table>
+
+
 </body>
+
 </html>
