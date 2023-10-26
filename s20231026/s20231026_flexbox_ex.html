@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <style>
+        * {
+            box-sizing: border-box;
+        }
     .conatiner {
         width: 800px;
         height: 100vh;
@@ -37,8 +40,17 @@
     }
     .bg-blue{
         background-color: lightskyblue;
-        background-image: url(./img/01-04.jpg);
+        
         background-size: cover;
+    }
+    a{
+        display: block;
+        width: 200px;
+        height: 200px;
+    }
+
+    a:visited{
+        background-image: url(./img/01-04.jpg);
     }
 
 
@@ -54,7 +66,7 @@
     <div class="item bg-green">O</div>
     <div class="item bg-blue">X</div>
     <div class="item bg-blue">X</div>
-    <div class="item">item 8</div>
+    <div class="item"><a href="">item 8</a></div>
     <div class="item bg-green">O</div>
 </div>
 </body>
