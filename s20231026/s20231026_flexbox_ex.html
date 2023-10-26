@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .conatiner {
+        width: 800px;
+        height: 100vh;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        /* 先單獨集中在 row， 因 colum 很少在用 */
+        background-color: lightyellow;
+        justify-content: space-evenly;    /* 水平置中 */
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .height {
+        height:60vh;
+    }
+
+    .item {
+        margin: 10px;
+        width: 200px;
+        height: 200px;
+        background-color: rgb(230, 231, 231);
+    }
+    .bg-green{
+        background-color: lightseagreen;
+        background-image: url(./img/01-03.jpg);
+        background-size: cover;
+        background-position: -90px;
+    }
+    .bg-blue{
+        background-color: lightskyblue;
+        background-image: url(./img/01-04.jpg);
+        background-size: cover;
+    }
+
+
+</style>
+</head>
+
+<body>
+<div class="conatiner">
+    <div class="item bg-green">O</div>
+    <div class="item">item 2</div>
+    <div class="item">item 3</div>
+    <div class="item">item 4</div>
+    <div class="item bg-green">O</div>
+    <div class="item bg-blue">X</div>
+    <div class="item bg-blue">X</div>
+    <div class="item">item 8</div>
+    <div class="item bg-green">O</div>
+</div>
+</body>
+</html>
