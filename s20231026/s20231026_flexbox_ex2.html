@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nosifer&display=swap" rel="stylesheet">
 
 <head>
     <meta charset="UTF-8">
@@ -15,10 +18,11 @@
 
     body {
         background-image: url(./img/bg.jpg);
-        background-size: cover ;
+        background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-position: center;
+
     }
 
     .conatiner {
@@ -58,9 +62,9 @@
         height: 100%;
     }
 
-    .nav-fixed {
+    .nav-sticky {
         display: flex;
-        position:fixed;
+        position: sticky;
         top: 0;
         width: 100%;
         height: 8vh;
@@ -95,10 +99,11 @@
     }
 
     .h {
+        border: 1px solid black;
         font-size: 24px;
         text-align: center;
-       
-        margin: auto; margin: 20px;
+        margin: auto;
+        margin: 20px;
         background-color: #ffd3b6;
         width: 10%;
     }
@@ -112,18 +117,46 @@
         bottom: 50px;
         right: 20px;
     }
+
+    .banner{
+        background-image: radial-gradient(#fdba46 0%, #fc6900 100%);
+        display: flex;
+        justify-content: space-between;  
+    }
+    .banner img {
+        height: 15vh;    
+    }
+    .banner_text{
+        font-family: 'Bebas Neue', sans-serif;
+        font-family: 'Nosifer', sans-serif;
+        font-size: 36px;
+        text-align: center;
+        color: #640292;
+        margin-top: 10px;
+    }
+    .banner_text p {
+        margin: 0;
+    }
+a img{
+    size: 10px;
+    
+}
 </style>
 </head>
 
 <body>
+    <div class="banner"><img src="./img/b-2.png" alt="" sizes="15vh" srcset="">
+        <div class="banner_text"> HAPPY Halloween</div>
+        <img src="./img/b-1.png" alt="" sizes="15vh" srcset=""></div>
     <a href="#" class="pos-fixed"><img src="./img/home.png" alt="" srcset=""></a>
-    <nav class="nav-fixed">
+    <nav class="nav-sticky">
         <a href="#">HOME</a>
-        <a href="#Decoration">Decoration</a>
+        <a href="#Decoration"><img src="./img/h1.png">Decoration</a>
         <a href="#Cosplay">Cosplay</a>
 
     </nav>
     <div class="top-10" id="Decoration"></div>
+
     <div class="h">
         <h3>Decoration</h3>
     </div>
@@ -174,7 +207,8 @@
     </div>
 
     <hr>
-    <div class="h" id="Cosplay">
+    <div class="top-10" id="Cosplay"></div>
+    <div class="h">
         <h3>Cosplay</h3>
     </div>
     <div class="conatiner h-100 m-10" id="Cosplay">
