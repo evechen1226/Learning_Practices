@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nosifer&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nosifer&display=swap" rel="stylesheet">
 
 <head>
     <meta charset="UTF-8">
@@ -31,7 +31,7 @@
         margin: auto;
         display: flex;
         flex-direction: row;
-        background-color: lightblue;
+        background-color: rgba(173, 216, 230, 0.726);
         justify-content: space-evenly;
         align-items: center;
         text-align: center;
@@ -99,7 +99,7 @@
     }
 
     .h {
-        border: 1px solid black;
+        /* border: 1px solid black; */
         font-size: 24px;
         text-align: center;
         margin: auto;
@@ -118,15 +118,17 @@
         right: 20px;
     }
 
-    .banner{
+    .banner {
         background-image: radial-gradient(#fdba46 0%, #fc6900 100%);
         display: flex;
-        justify-content: space-between;  
+        justify-content: space-between;
     }
+
     .banner img {
-        height: 15vh;    
+        height: 15vh;
     }
-    .banner_text{
+
+    .banner_text {
         font-family: 'Bebas Neue', sans-serif;
         font-family: 'Nosifer', sans-serif;
         font-size: 36px;
@@ -134,30 +136,65 @@
         color: #640292;
         margin-top: 10px;
     }
+
     .banner_text p {
         margin: 0;
     }
-a img{
-    size: 10px;
-    
-}
+
+    .nav-bg {
+        display: inline-block;
+        vertical-align: middle;
+        width: 50px;
+        height: 50px;
+        background-image: url(./img/h1.png);
+        background-repeat: no-repeat;
+    }
+
+    a {
+        color: #640292;
+    }
+
+    a:hover .nav-bg {
+        font-family: 'Bebas Neue', sans-serif;
+        font-family: 'Nosifer', sans-serif;
+        background-image: url(./img/h2.png);
+        background-repeat: no-repeat;
+    }
+
+    a:hover {
+        font-family: 'Bebas Neue', sans-serif;
+        font-family: 'Nosifer', sans-serif;
+
+    }
+
+    /* .nav-bg:hover{
+        background-image: url(./img/h2.png);
+    } */
 </style>
 </head>
 
 <body>
     <div class="banner"><img src="./img/b-2.png" alt="" sizes="15vh" srcset="">
         <div class="banner_text"> HAPPY Halloween</div>
-        <img src="./img/b-1.png" alt="" sizes="15vh" srcset=""></div>
+        <img src="./img/b-1.png" alt="" sizes="15vh" srcset="">
+    </div>
     <a href="#" class="pos-fixed"><img src="./img/home.png" alt="" srcset=""></a>
     <nav class="nav-sticky">
-        <a href="#">HOME</a>
-        <a href="#Decoration"><img src="./img/h1.png">Decoration</a>
-        <a href="#Cosplay">Cosplay</a>
+        <a href="#">
+            <div class="nav-bg"></div>HOME
+        </a>
+        <!-- <a href="#Decoration"><img src="./img/h1.png">Decoration</a> -->
+        <a href="#Decoration">
+            <div class="nav-bg"></div>Decoration
+        </a>
+        <a href="#Cosplay">
+            <div class="nav-bg"></div>Cosplay
+        </a>
 
     </nav>
-    <div class="top-10" id="Decoration"></div>
+    <!-- <div class="top-10" ></div> -->
 
-    <div class="h">
+    <div class="h" id="Decoration">
         <h3>Decoration</h3>
     </div>
 
