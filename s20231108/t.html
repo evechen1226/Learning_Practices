@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #ball {
+            width: 80px;
+            height: 80px;
+            border-radius: 40px;
+            background: red;
+            position: relative;
+            left: 0px;
+            top: 0px;
+        }
+       
+      
+        @keyframes ballmovement {
+            0% {
+             
+                background-color: yellow;
+            }
+
+            33% {
+                left: 100px;
+                top: 160px;
+            }
+
+            66% {
+                left: 200px;
+                top: 0px;                
+            
+            }
+
+            100% {
+                left: 300px;
+                top: 160px;
+                background-color: purple;
+            }
+        }
+
+        .animate {
+            animation-name: ballmovement;
+            animation-duration: 3s;
+            /* animation-delay: 3s; */
+             animation-timing-function: linear;
+            animation-iteration-count: infinite;/*無限播放*/
+            animation-direction: alternate; /*來回播放*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animate"  id="ball"></div>
+ 
+   
+</body>
+
+</html>
