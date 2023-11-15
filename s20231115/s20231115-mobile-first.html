@@ -26,31 +26,57 @@
             border: 1px solid white;
         }
 
-            @media screen and (min-width: 576px) {
+        @media screen and (min-width: 576px) {
 
-                /* large CSS */
-                .container {
-                    display: flex;
-                    justify-content: space-around;
-                    width: 80%;
-                    align-items: center;
-                    margin: auto;
-                    background-color: lightblue;
-                    flex-wrap: wrap;
-                    /* height: 80vh; */
-                }
-
-                .item {
-                    width: 30%;
-                    height: 300px;
-                    background-color: lightpink;
-                    border: 1px solid white;
-                    margin-bottom: 20px;
-                }
-
-
-
+            /* large CSS */
+            .container {
+                display: flex;
+                justify-content: space-around;
+                width: 80%;
+                align-items: center;
+                margin: auto;
+                background-color: lightblue;
+                flex-wrap: wrap;
+                /* height: 80vh; */
             }
+
+            .item {
+                width: 30%;
+                height: 300px;
+                background-color: lightpink;
+                border: 1px solid white;
+                margin-bottom: 20px;
+            }
+
+
+
+        }
+
+        @media print and (min-width: 576px) {
+
+            /* large CSS */
+            .container {
+                display: flex;
+                justify-content: space-around;
+                width: 80%;
+                align-items: center;
+                margin: auto;
+                background-color: lightgreen;
+                flex-wrap: wrap;
+                /* height: 80vh; */
+            }
+
+            .item {
+                width: 30%;
+                height: 300px;
+                background-color: lightpink;
+                border: 1px solid white;
+                margin-bottom: 20px;
+            }
+
+
+
+        }
     </style>
 </head>
 
