@@ -1,14 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .my-container {
+            background-color: lightblue;
+        }
 
+
+        .item {
+            background-color: lightgoldenrodyellow;
+            width: 300px;
+            height: 300px;
+
+            border: 1px solid white;
+            margin: auto;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .bd-1{
+            border: 1px solid white;
+        }
+    </style>
 </head>
-<body>
 
+<body>
+    <div class="my-container">
+        <div class="row justify-content-center align-items">
+
+            <div class="col-sm-6 col-md-4 bd-1">
+                <div class="item"></div>
+            </div>
+            <div class="col-sm-6 col-md-4 bd-1">
+                <div class="item"></div>
+            </div>
+            <div class="col-sm-6 col-md-4 bd-1">
+                <div class="item"></div>
+            </div>
+            <div class="col-sm-6 col-md-4 bd-1">
+                <div class="item"></div>
+            </div>
+            <div class="col-sm-6 col-md-4 bd-1">
+                <div class="item"></div>
+            </div>
+            <div class="col-sm-6 col-md-4 bd-1">
+                <div class="item"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-container">
+        <div class="row justify-content-center align-items">
+
+            <div class="col-sm-6 col-md-4 bd-1">
+                <div class="item"></div>
+            </div>
+            <div class="col-sm-6 offset-3 col-md-4 bd-1">
+                <div class="item"></div>
+            </div>
+
+        </div>
+    </div>
 </body>
+
 </html>
