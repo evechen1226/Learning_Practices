@@ -79,7 +79,7 @@
 
     }
 
-    .title {
+    .title-index {
       width: 100px;
       font-weight: 500;
       font-size: 24px;
@@ -87,6 +87,7 @@
       border-bottom: 1px solid black;
       margin-top: 20px;
       margin-bottom: 20px;
+      
     }
 
     .text {
@@ -100,6 +101,7 @@
       background-image: url("images/menu1.png");
       line-height: 35px;
       text-align: center;
+      
     }
 
     a>.text {
@@ -145,7 +147,7 @@
   <div class="container">
     <div class="main">
       <div class="top">
-        <a href="./index.html"><img src="./images/logo2.png" alt="「國立科技高中校園社團介紹網" width="994px" height="60px"
+        <a href="./index.html"><img src="./images/logo.png" alt="國立科技高中校園社團介紹網" width="994px" height="60px"
             srcset=""></a>
       </div>
 
@@ -154,8 +156,8 @@
 
         <div class="mid-l">
           <div class="menu">
-            <div class="title">社團介紹</div>
-            <a href="./guitar_history.html">
+            <div class="title-index">社團介紹</div>
+            <a href="./guitar_history.html" target="my-iframe">
               <div class="text">吉他社</div>
             </a>
             <div class="text">熱舞社</div>
@@ -176,7 +178,7 @@
 
 
           </div>
-          <div class="content"><iframe src="./main.html" width="100%" height="100%" frameborder="0" scrolling="yes"></iframe></div>
+          <div class="content" id="content"><iframe src="./main.html" width="100%" height="100%" frameborder="0" scrolling="yes" name="my-iframe"></iframe></div>
         </div>
 
 
