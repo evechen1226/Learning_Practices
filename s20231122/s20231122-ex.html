@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+        integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+        integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        /* .mian {}
+
+        .card-bg-img {
+            background-image: url();
+
+            justify-content: space-between;
+        } */
+        /* .img-50 {
+            height: 70vh;
+        } */
+        /* .carousel{
+            width: 50%;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- nav -->
+        <nav class="navbar navbar-expand-lg bg-success-subtle ">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1506/1506679.png" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top">
+
+                    Christmas
+                </a>
+                <a class="navbar-brand text-decoration-underline" href="#">Decorate</a>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Sales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Item</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                聖誕樹
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">300 CM ↑</a></li>
+                                <li><a class="dropdown-item" href="#">150~300 CM</a></li>
+                                <li><a class="dropdown-item" href="#">150 CM ↓</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">其它</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success me-3" type="submit">Search</button>
+                    </form>
+                    <button class="btn btn-success" type="submit">logout</button>
+
+                </div>
+            </div>
+        </nav>
+        <!-- nav -->
+
+        <!-- carousel -->
+        <div class="main">
+
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active bg-danger">
+                        <img src="https://cdn.pixabay.com/photo/2021/12/09/22/17/table-setting-6859274_1280.jpg"
+                            class="d-block" alt="..." width="50%">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://cdn.pixabay.com/photo/2016/12/14/14/22/santa-claus-1906513_1280.jpg"
+                            class="d-block" alt="..." width="50%">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://cdn.pixabay.com/photo/2022/12/18/20/09/christmas-market-7664171_1280.jpg"
+                            class="d-block" alt="..." width="50%">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div id="carouselExampleCaptions bg-success-subtle" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!-- carousel -->
+            <!-- card -->
+            <div class="card-row row mt-3">
+                <div class="col-3">
+                    <div class="card bg-danger ">
+                        <img src="https://shoplineimg.com/6110f2d6e2ccae003f50dcd0/655b221618f95d0001a10dbf/800x.webp?source_format=jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card bg-danger ">
+                        <img src="https://shoplineimg.com/6110f2d6e2ccae003f50dcd0/655b221118f95d0001a10d85/800x.webp?source_format=jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card bg-danger ">
+                        <img src="https://shoplineimg.com/6110f2d6e2ccae003f50dcd0/65360d92f042cb001488e2eb/800x.webp?source_format=jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card bg-danger ">
+                        <img src="https://shoplineimg.com/6110f2d6e2ccae003f50dcd0/636c992e03c3a30031d47a50/800x.webp?source_format=jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- collapse -->
+            <div class="d-flex justify-content-evenly m-1">
+
+                <a class="btn btn-primary col-3 " data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+                    aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+
+                <button class="btn btn-primary col-3 ms-5 me-5" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#multiCollapseExample2" aria-expanded="false"
+                    aria-controls="multiCollapseExample2">Toggle second element</button>
+
+                <button class="btn btn-primary col-3" type="button" data-bs-toggle="collapse"
+                    data-bs-target=".multi-collapse" aria-expanded="false"
+                    aria-controls="multiCollapseExample1 multiCollapseExample2 multiCollapseExample3">Toggle both
+                    elements</button>
+
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <div class="collapse multi-collapse" id="multiCollapseExample1">
+                        <div class="card card-body ">
+                            <img src="https://cdn.pixabay.com/photo/2021/12/09/22/17/table-setting-6859274_1280.jpg"
+                                alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                        <div class="card card-body card-bg-img">
+                            Some placeholder content for the second collapse component of this multi-collapse example.
+                            This panel is hidden by default but revealed when the user activates the relevant trigger.
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col">
+                    <div class="collapse multi-collapse" id="multiCollapseExample3">
+                        <div class="card card-body card-bg-img">
+                            Some placeholder content for the second collapse component of this multi-collapse example.
+                            This panel is hidden by default but revealed when the user activates the relevant trigger.
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <!-- collapse -->
+        <!-- dropdowns -->
+
+
+        <div class="dropdown mt-5">
+            <button type="button" class="btn btn-success dropdown-toggle w-100" data-bs-toggle="dropdown"
+                aria-expanded="false" data-bs-auto-close="outside">
+                Dropdown form
+            </button>
+            <form class="dropdown-menu p-4">
+                <div class="row">
+                    <div class="col-2 w-100 h-100 btn-danger">
+                        <div class="">
+
+                        </div>
+                    </div>
+                    <div class="col-10">
+                        <div class="mb-3">
+                            <label for="exampleDropdownFormEmail2" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleDropdownFormEmail2"
+                                placeholder="email@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleDropdownFormPassword2"
+                                placeholder="Password">
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                                <label class="form-check-label" for="dropdownCheck2">
+                                    Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </div>
+            </form>
+        </div>
+
+
+        <!-- dropdowns -->
+
+
+    </div>
+
+
+
+</body>
+
+</html>
