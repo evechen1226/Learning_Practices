@@ -11,7 +11,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
         integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mountains+of+Christmas:wght@700&family=Nosifer&display=swap"
+        rel="stylesheet">
     <style>
         body {
             height: 2000px;
@@ -30,6 +37,25 @@
         /* .carousel{
             width: 50%;
         } */
+        .bg-b {
+            background-color: rgb(2, 48, 100);
+        }
+
+        .img-text {
+            /* background-color: lightblue; */
+            width: 50%;
+            font-size: 18px;
+            font-family: 'Mountains of Christmas', serif;
+        }
+        .img-title{
+            font-family: 'Mountains of Christmas', serif;
+            font-size: 40px;
+            font-style: italic;
+        }
+        .card-text:hover{
+            display: block;
+            
+        }
     </style>
 </head>
 
@@ -91,7 +117,7 @@
         <!-- nav -->
 
         <!-- carousel -->
-        <div class="main">
+        <div class="main mt-2">
 
             <div id="carouselExampleCaptions" class="carousel slide">
                 <div class="carousel-indicators">
@@ -106,27 +132,30 @@
                     <div class="carousel-item active bg-danger">
                         <img src="https://cdn.pixabay.com/photo/2021/12/09/22/17/table-setting-6859274_1280.jpg"
                             class="d-block" alt="..." width="50%">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
+                        <div class="carousel-caption d-none d-md-block text-end ">
+                            <p class="img-title">The Polar Express</p>
+                            <div class="img-text ms-auto">Seeing is believing, but sometimes the most real things in the
+                                world are the things we can’t see.</div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item bg-danger">
                         <img src="https://cdn.pixabay.com/photo/2016/12/14/14/22/santa-claus-1906513_1280.jpg"
                             class="d-block" alt="..." width="50%">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                            <div class="carousel-caption d-none d-md-block text-end ">
+                                <p class="img-title">The Polar Express</p>
+                                <div class="img-text ms-auto">Seeing is believing, but sometimes the most real things in the
+                                    world are the things we can’t see.</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item bg-b">
                         <img src="https://cdn.pixabay.com/photo/2022/12/18/20/09/christmas-market-7664171_1280.jpg"
                             class="d-block" alt="..." width="50%">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+                            <div class="carousel-caption d-none d-md-block text-end ">
+                                <p class="img-title">The Polar Express</p>
+                                <div class="img-text ms-auto">Seeing is believing, but sometimes the most real things in the
+                                    world are the things we can’t see.</div>
+                            </div>
                         </div>
-                    </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                     data-bs-slide="prev">
@@ -149,17 +178,6 @@
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
                         aria-label="Slide 3"></button>
                 </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
             <!-- carousel -->
             <!-- card -->
@@ -169,11 +187,12 @@
                         <img src="https://shoplineimg.com/6110f2d6e2ccae003f50dcd0/655b221618f95d0001a10dbf/800x.webp?source_format=jpg"
                             class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            <h5 class="card-title text-light fw-bold fst-italic">Christmas Small Decoration </h5>
+                            <p class="card-text text-light d-none ">
+                                Some quick example text to build on the card title and make up the bulk
                                 of
                                 the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-success">More</a>
                         </div>
                     </div>
                 </div>
@@ -265,11 +284,12 @@
 
         <!-- dropdowns -->
 
-        <div class="dropdown">
-            <div class="container">
-                <div class="row">
-                    <div class="col-8 bg-danger">
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle w-100" data-bs-toggle="dropdown"
                             aria-expanded="false" data-bs-auto-close="outside">
                             Dropdown form
                         </button>
@@ -295,8 +315,10 @@
                             <button type="submit" class="btn btn-primary">Sign in</button>
                         </form>
                     </div>
-                    <div class="col-4 bg-light">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                </div>
+                <div class="col-4">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Dropdown button
                         </button>
@@ -320,9 +342,74 @@
 
 
     </div>
+    <footer>
+        <div class="offcanvas offcanvas-bottom text-bg-dark" id="demo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="offcanvas-header">
+                            <h3 class="offcanvas-title">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1302/1302481.png" alt="" srcset=""
+                                    width="150px"></i>
+                            </h3>
+
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="offcanvas-body">
+                            <h3>服務資訊</h3>
+                            線上文字即時交談</br>
+                            客服信箱</br>
+                            聯絡我們</br>
+                            服務中心據點</br>
+                            服務中心公告</br>
+
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="offcanvas-body">
+                            <h3>帳號 & 社群</h3>
+                            我的頁面<br>
+                            訂單<br>
+                            願望清單<br>
+                            優惠券<br>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="offcanvas-body">
+                            <h3>可持續發展</h3>
+                            環境<br>
+                            安全與隱私<br>
+                            企業公民<br>
+                            企業永續發展<br>
+
+                        </div>
+                    </div>
+                    <div class="col-1">
+                        <div class="offcanvas-body">
+                            <button type="button" class="btn-close btn-close-white"
+                                data-bs-dismiss="offcanvas"></button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <p class="text-center">Copyright © 2023 EVELYN All rights reserved.
+                </p>
+            </div>
 
 
+        </div>
 
+        <div class="container mt-3 text-center d-flex flex-column  ">
+            <h3>Bottom Offcanvas</h3>
+            <p>The .offcanvas-bottom class positions the offcanvas at the bottom of the page.</p>
+            <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                <i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i> &nbsp;
+                More About
+                &nbsp;<i class="fa-solid fa-arrow-up" style="color: #ffffff;"></i>
+            </button>
+        </div>
+    </footer>
 </body>
 
 </html>
