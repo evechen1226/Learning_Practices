@@ -1,0 +1,27 @@
+    body {
+      height: 2000px;
+      box-sizing: border-box;
+      font-family: '標楷體';
+      background-image: url(./images/0101.jpg);
+    }
+
+    .text {
+      font-size: 16px;
+      color: #FF0000;
+    }
+
+    .html-title {
+      font-size: 18px;
+      color: #FF0000;
+      text-align: center;
+    }
+
+    .link {
+      font-family: '新細明體';
+    }
+
+    .box {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
