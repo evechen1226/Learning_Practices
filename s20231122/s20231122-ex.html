@@ -42,19 +42,21 @@
         }
 
         .img-text {
-            /* background-color: lightblue; */
-            width: 50%;
             font-size: 18px;
             font-family: 'Mountains of Christmas', serif;
         }
-        .img-title{
+
+        .img-title {
             font-family: 'Mountains of Christmas', serif;
             font-size: 40px;
             font-style: italic;
+
+
         }
-        .card-text:hover{
+
+        .card-text:hover {
             display: block;
-            
+
         }
     </style>
 </head>
@@ -118,68 +120,56 @@
 
         <!-- carousel -->
         <div class="main mt-2">
-
-            <div id="carouselExampleCaptions" class="carousel slide">
+            <!-- Carousel -->
+            <div id="demo" class="carousel slide .carousel-fade" data-bs-ride="carousel">
+            
+                <!-- Indicators/dots -->
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
                 </div>
+            
+                <!-- The slideshow/carousel -->
                 <div class="carousel-inner">
-                    <div class="carousel-item active bg-danger">
-                        <img src="https://cdn.pixabay.com/photo/2021/12/09/22/17/table-setting-6859274_1280.jpg"
-                            class="d-block" alt="..." width="50%">
-                        <div class="carousel-caption d-none d-md-block text-end ">
-                            <p class="img-title">The Polar Express</p>
-                            <div class="img-text ms-auto">Seeing is believing, but sometimes the most real things in the
-                                world are the things we can’t see.</div>
+                    <div class="carousel-item active">
+                        <img src="https://images.pexels.com/photos/250177/pexels-photo-250177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="Los Angeles" class="d-block" style="width:100%">
+                        <div class="carousel-caption">
+                            <h3 class="img-title ">Silent Night</h3>
+                            <p class="img-text">Round yon Virgin Mother and Child
+                                Holy Infant so tender and mildSleep in heavenly peace</p>
                         </div>
                     </div>
-                    <div class="carousel-item bg-danger">
-                        <img src="https://cdn.pixabay.com/photo/2016/12/14/14/22/santa-claus-1906513_1280.jpg"
-                            class="d-block" alt="..." width="50%">
-                            <div class="carousel-caption d-none d-md-block text-end ">
-                                <p class="img-title">The Polar Express</p>
-                                <div class="img-text ms-auto">Seeing is believing, but sometimes the most real things in the
-                                    world are the things we can’t see.</div>
-                            </div>
+                    <div class="carousel-item">
+                        <img src="https://images.pexels.com/photos/5618031/pexels-photo-5618031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="Chicago" class="d-block" style="width:100%">
+                        <div class="carousel-caption">
+                            <h3 class="img-title ">We Wish You a Merry Christmas</h3>
+                            <p class="img-text">Good tidings we bring to you and your kin.
+                                We wish you a merry Christmas
+                                And a Happy New Year!</p>
                         </div>
-                    <div class="carousel-item bg-b">
-                        <img src="https://cdn.pixabay.com/photo/2022/12/18/20/09/christmas-market-7664171_1280.jpg"
-                            class="d-block" alt="..." width="50%">
-                            <div class="carousel-caption d-none d-md-block text-end ">
-                                <p class="img-title">The Polar Express</p>
-                                <div class="img-text ms-auto">Seeing is believing, but sometimes the most real things in the
-                                    world are the things we can’t see.</div>
-                            </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.pexels.com/photos/250177/pexels-photo-250177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="New York" class="d-block" style="width:100%">
+                        <div class="carousel-caption">
+                            <h3 class="img-title ">The Polar Express</h3>
+                            <p class="img-text">Seeing is believing, but sometimes the most real things in the
+                                world are the things we can’t see.</p>
                         </div>
+                    </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+            
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
-
-            <div id="carouselExampleCaptions bg-success-subtle" class="carousel slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-            </div>
-            <!-- carousel -->
             <!-- card -->
             <div class="card-row row mt-3">
                 <div class="col-3">
@@ -201,11 +191,9 @@
                         <img src="https://shoplineimg.com/6110f2d6e2ccae003f50dcd0/655b221118f95d0001a10d85/800x.webp?source_format=jpg"
                             class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title text-light fw-bold fst-italic">Christmas tree Decoration</h5>
+
+                            <a href="#" class="btn btn-success">More</a>
                         </div>
                     </div>
                 </div>
@@ -214,11 +202,9 @@
                         <img src="https://shoplineimg.com/6110f2d6e2ccae003f50dcd0/65360d92f042cb001488e2eb/800x.webp?source_format=jpg"
                             class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title text-light fw-bold fst-italic">Christmas tree Decoration</h5>
+
+                            <a href="#" class="btn btn-success">More</a>
                         </div>
                     </div>
                 </div>
@@ -227,11 +213,9 @@
                         <img src="https://shoplineimg.com/6110f2d6e2ccae003f50dcd0/636c992e03c3a30031d47a50/800x.webp?source_format=jpg"
                             class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title text-light fw-bold fst-italic">Christmas Decoration</h5>
+
+                            <a href="#" class="btn btn-success">More</a>
                         </div>
                     </div>
                 </div>
@@ -240,14 +224,14 @@
             <!-- collapse -->
             <div class="d-flex justify-content-evenly m-1">
 
-                <a class="btn btn-primary col-3 " data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+                <a class="btn btn-success col-3 " data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
                     aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
 
-                <button class="btn btn-primary col-3 ms-5 me-5" type="button" data-bs-toggle="collapse"
+                <button class="btn btn-success col-3 ms-5 me-5" type="button" data-bs-toggle="collapse"
                     data-bs-target="#multiCollapseExample2" aria-expanded="false"
                     aria-controls="multiCollapseExample2">Toggle second element</button>
 
-                <button class="btn btn-primary col-3" type="button" data-bs-toggle="collapse"
+                <button class="btn btn-success col-3" type="button" data-bs-toggle="collapse"
                     data-bs-target=".multi-collapse" aria-expanded="false"
                     aria-controls="multiCollapseExample1 multiCollapseExample2 multiCollapseExample3">Toggle both
                     elements</button>
@@ -289,7 +273,7 @@
             <div class="row">
                 <div class="col-8">
                     <div class="dropdown">
-                        <button type="button" class="btn btn-primary dropdown-toggle w-100" data-bs-toggle="dropdown"
+                        <button type="button" class="btn btn-success dropdown-toggle w-100" data-bs-toggle="dropdown"
                             aria-expanded="false" data-bs-auto-close="outside">
                             Dropdown form
                         </button>
@@ -312,7 +296,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Sign in</button>
+                            <button type="submit" class="btn btn-success">Sign in</button>
                         </form>
                     </div>
                 </div>
@@ -343,7 +327,7 @@
 
     </div>
     <footer>
-        <div class="offcanvas offcanvas-bottom text-bg-dark" id="demo">
+        <div class="offcanvas offcanvas-bottom text-bg-dark" id="demo2">
             <div class="container">
                 <div class="row">
                     <div class="col-3">
@@ -403,7 +387,7 @@
         <div class="container mt-3 text-center d-flex flex-column  ">
             <h3>Bottom Offcanvas</h3>
             <p>The .offcanvas-bottom class positions the offcanvas at the bottom of the page.</p>
-            <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+            <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo2">
                 <i class="fa-solid fa-arrow-down" style="color: #ffffff;"></i> &nbsp;
                 More About
                 &nbsp;<i class="fa-solid fa-arrow-down" style="color: #ffffff;"></i>
