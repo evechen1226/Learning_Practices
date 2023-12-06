@@ -21,7 +21,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col">
-                <div class="box bg-danger w-100">
+                <div class="box bg-danger w-100" id="myBox">
 
                 </div>
             </div>
@@ -33,11 +33,40 @@
             </div>
         </div>
     </div>
+    btnSecondary
+    btnSuccess
+    btnDanger
 
     <script>
-        let btnPrimary = document.getElementById('btnPrimary');
-        console.log(btnPrimary);
-        console.log('btnPrimary ok');
+        //綁定
+        //window：瀏覽器，document：HTML
+        let btnPrimary = window.document.getElementById('btnPrimary');
+        let btnSecondary = document.getElementById('btnSecondary');
+        let btnSuccess = document.getElementById('btnSuccess');
+        let btnDanger = document.getElementById('btnDanger');
+        let myBox = document.getElementById('myBox');
+
+        //動作
+        btnPrimary.addEventListener('click', function () {
+            console.log('btnPrimary ok');
+            myBox.setAttribute('class', "box bg-primary w-100");
+        });
+        btnSecondary.addEventListener('click', function () {
+            console.log('btnSecondaryy ok');
+            myBox.setAttribute('class', "box bg-secondary w-100");
+        });
+        btnSuccess.addEventListener('click', function () {
+            console.log('bbtnSuccess ok');
+            myBox.setAttribute('class', "box bg-success w-100");
+        });
+        btnDanger.addEventListener('click', function () {
+            console.log('bbtnDanger ok');
+            myBox.setAttribute('class', "box bg-sanger w-100");
+        });
+
+
+
+
     </script>
 </body>
 
