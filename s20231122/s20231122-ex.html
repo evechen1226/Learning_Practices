@@ -22,7 +22,14 @@
     <style>
         body {
             height: 2000px;
-            
+
+        }
+
+        .box-300 {
+            height: 300px;
+        }
+        .kjk{
+            border: 1px solid lightslategray;
         }
 
         /* .mian {}
@@ -123,14 +130,14 @@
         <div class="main mt-2">
             <!-- Carousel -->
             <div id="demo" class="carousel slide .carousel-fade" data-bs-ride="carousel">
-            
+
                 <!-- Indicators/dots -->
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
                     <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
                     <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
                 </div>
-            
+
                 <!-- The slideshow/carousel -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -162,7 +169,7 @@
                         </div>
                     </div>
                 </div>
-            
+
                 <!-- Left and right controls/icons -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
@@ -171,6 +178,7 @@
                     <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
+            <br>
             <!-- card -->
             <div class="card-row row mt-3">
                 <div class="col-3">
@@ -222,6 +230,53 @@
                 </div>
 
             </div>
+            <br>
+            <!-- nav tabs -->
+            <ul class="nav nav-tabs nav-fill mb-3" id="myTab" role="tablist">
+                <li class="nav-item " role="presentation">
+                    <button class="nav-link active text-success" id="home-tab" data-bs-toggle="tab"
+                        data-bs-target="#home" type="button" role="tab" aria-controls="home"
+                        aria-selected="true">Christmas</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-success" id="profile-tab" data-bs-toggle="tab"
+                        data-bs-target="#profile" type="button" role="tab" aria-controls="profile"
+                        aria-selected="false">Profile</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link text-success" id="contact-tab" data-bs-toggle="tab"
+                        data-bs-target="#contact" type="button" role="tab" aria-controls="contact"
+                        aria-selected="false">Contact</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active box-300" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <img src="https://pcm.trplus.com.tw/1000x1000/sys-master/productImages/ha1/h7c/12082792890398/000000000014347114-gallery-01-20230828105031908.jpg"
+                        width="300px" height="300px" alt="" srcset="" style="float: left;margin-right:15px">Christmas is
+                    one of the most beautiful holidays of all time. It is the day when Gods son was born on earth.
+                    Hence, this day is sacred for all Christians around the world. The Christmas season gives rise to a
+                    number of Christmas traditions that come along. Here are a few of them that are celebrated with zest
+                    and enthusiasm worldwide for centuries.
+                </div>
+                <div class="tab-pane fade box-300" id="profile" role="tabpanel" aria-labelledby="profile-tab"><img
+                        src="https://pcm.trplus.com.tw/1000x1000/sys-master/productImages/h6e/h52/12104993013790/000000000014367239-gallery-03-20231011115243127.jpg"
+                        width="300px" height="300px" alt="" srcset="" style="float: right;margin-left:15px;">Christmas
+                    is
+                    one of the most beautiful holidays of all time. It is the day when Gods son was born on earth.
+                    Hence, this day is sacred for all Christians around the world. The Christmas season gives rise to a
+                    number of Christmas traditions that come along. Here are a few of them that are celebrated with zest
+                    and enthusiasm worldwide for centuries.</div>
+                <div class="tab-pane fade box-300" id="contact" role="tabpanel" aria-labelledby="contact-tab"><img
+                        src="https://pcm.trplus.com.tw/1000x1000/sys-master/productImages/h11/hf9/12082914000926/000000000014366869-gallery-02-20230828115028233.jpg"
+                        width="300px" height="300px" alt="" srcset=""
+                        style="float: left;margin-right:15px;">Christmas is
+                    one of the most beautiful holidays of all time. It is the day when Gods son was born on earth.
+                    Hence, this day is sacred for all Christians around the world. The Christmas season gives rise to a
+                    number of Christmas traditions that come along. Here are a few of them that are celebrated with zest
+                    and enthusiasm worldwide for centuries.</div>
+            </div>
+            <br>
+            <!-- nav tabs end -->
             <!-- collapse -->
             <div class="d-flex justify-content-evenly m-1">
 
@@ -238,6 +293,7 @@
                     elements</button>
 
             </div>
+            <br>
             <div class="row">
                 <div class="col-8">
                     <div class="collapse multi-collapse" id="multiCollapseExample1">
@@ -264,6 +320,8 @@
                     </div>
                 </div> -->
             </div>
+            <br>
+
         </div>
         <!-- collapse-end -->
 

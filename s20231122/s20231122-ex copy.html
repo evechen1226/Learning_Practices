@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+        integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+        integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mountains+of+Christmas:wght@700&family=Nosifer&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            height: 2000px;
+
+        }
+
+        .box-300 {
+            height: 300px;
+        }
+
+        /* .mian {}
+
+        .card-bg-img {
+            background-image: url();
+
+            justify-content: space-between;
+        } */
+        /* .img-50 {
+            height: 70vh;
+        } */
+        /* .carousel{
+            width: 50%;
+        } */
+        .bg-b {
+            background-color: rgb(2, 48, 100);
+        }
+
+        .img-text {
+            font-size: 18px;
+            font-family: 'Mountains of Christmas', serif;
+        }
+
+        .img-title {
+            font-family: 'Mountains of Christmas', serif;
+            font-size: 40px;
+            font-style: italic;
+
+
+        }
+
+        .card-text:hover {
+            display: block;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- nav -->
+        <nav class="navbar navbar-expand-lg bg-success-subtle ">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1506/1506679.png" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top">
+
+                    Christmas
+                </a>
+                <a class="navbar-brand text-decoration-underline" href="#">Decorate</a>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Sales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Item</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                聖誕樹
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">300 CM ↑</a></li>
+                                <li><a class="dropdown-item" href="#">150~300 CM</a></li>
+                                <li><a class="dropdown-item" href="#">150 CM ↓</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">其它</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success me-3" type="submit">Search</button>
+                    </form>
+                    <button class="btn btn-success" type="submit">logout</button>
+
+                </div>
+            </div>
+        </nav>
+        <!-- nav -->
+
+        <!-- carousel -->
+        <div class="main mt-2">
+            <!-- Carousel -->
+            <div id="demo" class="carousel slide .carousel-fade" data-bs-ride="carousel">
+
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://images.pexels.com/photos/250177/pexels-photo-250177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="Los Angeles" class="d-block" style="width:100%">
+                        <div class="carousel-caption">
+                            <h3 class="img-title ">Silent Night</h3>
+                            <p class="img-text">Round yon Virgin Mother and Child
+                                Holy Infant so tender and mildSleep in heavenly peace</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.pexels.com/photos/196648/pexels-photo-196648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="Chicago" class="d-block" style="width:100%">
+                        <div class="carousel-caption">
+                            <h3 class="img-title ">We Wish You a Merry Christmas</h3>
+                            <p class="img-text">Good tidings we bring to you and your kin.
+                                We wish you a merry Christmas
+                                And a Happy New Year!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.pexels.com/photos/250177/pexels-photo-250177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="New York" class="d-block" style="width:100%">
+                        <div class="carousel-caption">
+                            <h3 class="img-title ">The Polar Express</h3>
+                            <p class="img-text">Seeing is believing, but sometimes the most real things in the
+                                world are the things we can’t see.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+            <br>
+            <!-- card -->
+            <div class="card-row row mt-3">
+                <div class="col-3">
+                    <div class="card bg-danger ">
+                        <img src="https://shoplineimg.com/6110f2d6e2ccae003f50dcd0/655b221618f95d0001a10dbf/800x.webp?source_format=jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fw-bold fst-italic">Christmas Small Decoration </h5>
+                            <p class="card-text text-light d-none ">
+                                Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card's content.</p>
+                            <a href="#" class="btn btn-success">More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card bg-danger ">
+                        <img src="https://shoplineimg.com/6110f2d6e2ccae003f50dcd0/655b221118f95d0001a10d85/800x.webp?source_format=jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fw-bold fst-italic">Christmas tree Decoration</h5>
+
+                            <a href="#" class="btn btn-success">More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card bg-danger ">
+                        <img src="https://shoplineimg.com/6110f2d6e2ccae003f50dcd0/65360d92f042cb001488e2eb/800x.webp?source_format=jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fw-bold fst-italic">Christmas tree Decoration</h5>
+
+                            <a href="#" class="btn btn-success">More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card bg-danger ">
+                        <img src="https://shoplineimg.com/6110f2d6e2ccae003f50dcd0/636c992e03c3a30031d47a50/800x.webp?source_format=jpg"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-light fw-bold fst-italic">Christmas Decoration</h5>
+                            <p class="card-text">This is a short card.</p>
+                            <p class="card-text" data-bs-toggle="tooltip" data-bs-placement="bottom" title="This is a short card.">This is a short card.</p>
+                            <a href="#" class="btn btn-success">More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <div class="container mt-5">
+                <div class="col-3">
+                  <div class="card bg-danger ">
+                    <img src="https://shoplineimg.com/6110f2d6e2ccae003f50dcd0/636c992e03c3a30031d47a50/800x.webp?source_format=jpg"
+                         class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title text-light fw-bold fst-italic">Christmas Decoration</h5>
+                      <!-- 使用 data-bs-toggle 和 data-bs-tooltip 屬性來啟用 Tooltip -->
+                      <p class="card-text" data-bs-toggle="tooltip" data-bs-placement="bottom" title="This is a short card.">This is a short card.</p>
+                      <a href="#" class="btn btn-success">More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+</body>
+
+</html>
