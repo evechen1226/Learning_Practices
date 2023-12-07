@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <h2>Search Word</h2>
+        <p>查詢單字 可以連接不同網站</p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>word</th>
+                    <th>button</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" class="form-control" id="date1" placeholder="Enter Text" name="date1">
+                    </td>
+                    <td>
+                        <input type="text" class="form-control" 
+                        id="date2" placeholder="Enter Text" name="date2"
+                        value="">
+                    </td>
+                    <td>
+                        <button type="button" id="myBtn">search</button>
+                    </td></tr></tbody></table>
+    </div>
+    <script>
+        // 1.綁定
+        let date1 = document.getElementById('date1');
+        let date2 = document.getElementById('date2');
+        let myBtn = document.getElementById('myBtn');
+
+        // 2.動作
+        myBtn.addEventListener('click', function () {
+            let date1Value = Number(date1.value);
+            let date2Value = Number(date2.value);
+            let sum = date1Value + date2Value;
+            console.log('sum',sum);
+            result.innerText=sum;
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
