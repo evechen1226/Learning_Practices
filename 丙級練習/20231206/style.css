@@ -4,26 +4,28 @@
     font-family: '標楷體';
     font-size: 16px;
     color: #000000;
-background-image: url(./images/0101.jpg);
+    background-image: url(./images/0101.jpg);
   }
 
-  .box{
+  .box {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 10px;
-margin-bottom: 10px;
+    margin-bottom: 10px;
   }
-  .link{
+
+  .link {
     font-family: '新細明體';
   }
-  .html-title{
+
+  .html-title {
     color: #FF0000;
     font-size: 18px;
     text-align: center;
   }
-  .row{
+
+  .row {
     display: flex;
     justify-content: center;
   }
-

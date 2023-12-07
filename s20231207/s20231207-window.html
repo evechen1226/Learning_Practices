@@ -1,0 +1,33 @@
+window.open() - open a new window
+window.close() - close the current window
+window.moveTo() - move the current window
+window.resizeTo() - resize the current window
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window</title>
+    <style>
+        iframe{
+            width: 500px;height: 500px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+<button type="button" id="btnOpen">window.open('google')</button>
+    </div>
+    <iframe src="" frameborder="0" id="myIframe" ></iframe>
+
+
+<script>
+    let btnOpen = document.getElementById('btnOpen');
+console.log('btnOpen ok');
+    btnOpen.addEventListener('click',function(){
+        window.open('https://www.google.com/');
+    })
+</script>    
+</body>
+</html>

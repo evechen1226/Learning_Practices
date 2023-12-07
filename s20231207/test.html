@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>window.open 範例</title>
+</head>
+<body>
+
+<button id="btnOpen">開啟新視窗</button>
+<iframe id="myIframe" src="about:blank"></iframe>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  let btnOpen = document.getElementById('btnOpen');
+  let myIframe = document.getElementById('myIframe');
+
+  btnOpen.addEventListener('click', function() {
+    // 在 iframe 的 HTML 內容中添加一個連結，點擊時在新窗口中打開
+    myIframe.contentDocument.body.innerHTML = '<a href="https://www.google.com" target="_blank">點擊這裡</a>';
+  });
+});
+</script>
+
+</body>
+</html>
