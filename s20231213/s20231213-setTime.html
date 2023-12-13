@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+        integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+        integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<style>
+    .container{
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .box {
+        width: 300px;
+        height: 300px;
+        background-color: red;
+    }
+
+    .myImg {
+        position: relative;
+
+    }
+
+    .btnBox {
+        width: 100px;
+        height: 100px;
+    }
+
+    .animation {
+        animation-name: example;
+        animation-duration: 4s;
+    }
+
+    @keyframes example {
+        0% {
+            /* background-color: red; */
+            left: 0px;
+            top: 0px;
+        }
+
+        100% {
+            /* background-color: red; */
+            left: 150%;
+            top: 0px;
+            
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+
+        <div class="box rounded-circle" id="box">
+
+        </div>
+        <div class="btnBox">
+            <button type="button" class="btn btn-primary" id="btnGreen"> green </button>
+        </div>
+        <div class="myImg mt-5" id="myImg">
+<img src="https://i.gifer.com/embedded/download/X5Nj.gif" alt="">
+        </div>
+    </div>
+
+
+
+</body>
+<script>
+
+    let myImg = document.getElementById('myImg')
+    let btnGreen = document.getElementById('btnGreen');
+
+    //initFun 初始化的Function
+    function initFun() {
+        myImg.setAttribute('class', 'd-none');
+        btnGreen.setAttribute('class', 'btn btn-primar btn-lg mt-5 d-block')
+    }
+
+    function green() {
+        box.setAttribute('class', "box bg-success");
+        box.classList.add('rounded-circle');
+
+    };
+
+
+    btnGreen.addEventListener('click', function () {
+
+        setTimeout(green, 1000);
+        btnGreen.classList.add("d-none");
+        myImg.classList.add("animation");
+        setTimeout(function () {
+            btnGreen.setAttribute('class', 'btn btn-primary')
+        }, 2000);
+        setTimeout(function(){myImg.setAttribute('class', '');}
+            , 4000);
+        
+
+
+    });
+
+    // // 計時器（動作, 時間）
+    // setTimeout(function () {
+    //     alert('hello');
+    // }, 1000);
+
+    // // 將function 另外寫
+    // function alartFun() {
+    //     alert('I am back');
+    //     console.log('alartFun');
+    // }
+
+    // setTimeout(alartFun, 1000);
+
+    // // 箭頭函式
+    // // function =>
+    // // () 一樣
+    // // { } 如果只有一行 { }可省略
+
+    // setTimeout(()=>alert('I am back → → '),9000);
+
+
+</script>
+
+</html>
