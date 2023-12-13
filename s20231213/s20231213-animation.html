@@ -1,11 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+        integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+        integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+<style>
+    .container {
+        box-sizing: border-box;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .row {
+        display: flex;
+        width: 550px;
+        height: 200px;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+        background-color: gray;
+    }
+
+    .myImg {
+        position: relative;
+        text-align: right;
+
+    }
+
+    #myImg2 {
+        text-align: center;
+    }
+
+    .btnBox {
+        width: 100px;
+        height: 100px;
+    }
+
+    .animation {
+        animation-name: example;
+        animation-duration: 8s;
+        animation-fill-mode: forwards;
+    }
+
+    .animation2 {
+        animation-name: example2;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes example {
+        0% {
+            /* background-color: red; */
+            right: 0px;
+            top: 0px;
+        }
+
+        100% {
+            /* background-color: red; */
+            right: 100%;
+            top: 0px;
+
+        }
+    }
+
+    @keyframes example2 {
+        0% {
+            /* background-color: red; */
+            transform: scale(0.5);
+        }
+
+        100% {
+            /* background-color: red; */
+            transform: scale(1.5);
+
+        }
+    }
+</style>
+
 <body>
-    
+    <div class="container">
+        <div class="row bd-1 mt-5 border rounded-pill bg-light">
+            <div class="col-3">
+                <div class="box rounded-circle aling-center" id="box"></div>
+            </div>
+            <div class="col-3">
+                <div class="box rounded-circle" id="box1"></div>
+            </div>
+            <div class="col-3">
+                <div class="box rounded-circle" id="box2"></div>
+            </div>
+            <div class="btnBox col-3 mt-5">
+                <button type="button" class="btn btn-primary" id="btnGreen"> start </button>
+            </div>
+        </div>
+
+        <div class="myImg mt-5 d-none" id="myImg2">
+            <img src="https://i.pinimg.com/originals/82/d5/ad/82d5ad37ac5093c229c2b1924ce6c72b.gif" alt="">
+        </div>
+
+        <div class="myImg mt-5" id="myImg">
+            <img src="https://i0.wp.com/blog.mixflavor.com/wp-content/uploads/2018/12/1544670564-190da07fdce149def3b6ef377373d625.gif?w=1200&ssl=1"
+                alt="">
+        </div>
+
+
+    </div>
+
+
+
 </body>
+<script>
+
+    let myImg = document.getElementById('myImg')
+    let myImg2 = document.getElementById('myImg2')
+    let btnGreen = document.getElementById('btnGreen');
+
+    //initFun 初始化的Function
+    function initFun() {
+        myImg.setAttribute('class', 'd-none');
+        btnGreen.setAttribute('class', 'btn btn-primar btn-lg mt-5 d-block')
+    }
+
+    function green() {
+        box.setAttribute('class', "box bg-danger");
+        box.classList.add('rounded-circle');
+    };
+    // setTimeout(green,1000);
+
+    btnGreen.addEventListener('click', function () {
+
+        setTimeout(function () {
+            box.setAttribute('class', "box bg-danger");
+            box.classList.add('rounded-circle');
+        }, 500)
+
+        setTimeout(function () {
+            box1.setAttribute('class', "box bg-warning");
+            box1.classList.add('rounded-circle');
+        }, 1000)
+
+        setTimeout(function () {
+            box2.setAttribute('class', "box bg-success");
+            box2.classList.add('rounded-circle');
+        }, 1500)
+
+        btnGreen.classList.add("disabled");
+
+        setTimeout(function () {
+            myImg.classList.add("animation");
+        }, 2000)
+
+
+        setTimeout(function () {
+            btnGreen.setAttribute('class', 'btn btn-primary')
+        }, 4000);
+
+        setTimeout(function () {
+            myImg2.setAttribute('class', '')
+            myImg2.classList.add("animation2");
+        }, 8000);
+
+    });
+
+    // // 計時器（動作, 時間）
+    // setTimeout(function () {
+    //     alert('hello');
+    // }, 1000);
+
+    // // 將function 另外寫
+    // function alartFun() {
+    //     alert('I am back');
+    //     console.log('alartFun');
+    // }
+
+    // setTimeout(alartFun, 1000);
+
+    // // 箭頭函式
+    // // function =>
+    // // () 一樣
+    // // { } 如果只有一行 { }可省略
+
+    // setTimeout(()=>alert('I am back → → '),9000);
+
+
+</script>
+
 </html>
