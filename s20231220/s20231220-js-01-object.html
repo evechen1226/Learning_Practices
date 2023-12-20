@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        let obj = {
+            's1': 'amy',
+            's2': 'bob',
+            's3': 'cat',
+
+        }
+        //為什麼顯示的是四個
+        let originObj = obj;
+        console.log('originObj',originObj)
+        console.log('typeof', typeof(originObj));
+        
+        console.log('obj', obj);
+        console.log('typeof', typeof (obj));
+        
+
+        obj['s4'] = 'dog';
+        console.log('obj', obj)
+        console.log('typeof', typeof (obj));
+
+
+        let changeObj = obj;
+        console.log('changeObj',changeObj)
+        console.log('typeof', typeof(changeObj));
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object-this</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+        integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"
+        integrity="sha512-X/YkDZyjTf4wyc2Vy16YGCPHwAY8rZJY+POgokZjQB2mhIRFJCckEGc6YyX9eNsPfn0PzThEuNs+uaomE5CO6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+    <div class="container mt-3">
+        <h2>計算機</h2>
+        <div class="row">
+
+            <div class="col-sm-6">
+                <input class="form-control mb-3" type="text" name="" id="num1">
+            </div>
+            <!-- <div class="col-sm-6"><input class="form-control mb-3" type="text" name="" id="num2"></div>
+            <input class="btn btn-primary mb-3" type="button" value="sum 使用 onclick" onclick="sumFun2()">
+            <input class="btn btn-primary mb-3" type="button" id="myBtn" value="sum 使用 addEventListener"> -->
+
+
+            <div class="col-6">
+                <p id="result"> </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+<form action="">
+                <input type="radio" name="mind" id="happy" value="開心">
+                <label for="">開心</label>
+                <input type="radio" name="mind" id="sad" value="難過">
+                <label for="">難過</label>
+                <input type="radio" name="mind" id="angry" value="普通">
+                <label for="">普通</label>
+
+                <input class="btn btn-primary mb-3" type="button" id="myBtn" value="心情">
+                <p id="result"></p></form>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        // 練習 calObj
+        // num1
+        // num2
+        // sumFun +
+        // subFun -
+        // multi *
+        // div /
+        let happy = document.getElementById('happy');
+        let sad = document.getElementById('sad');
+        let angry = document.getElementById('angry');
+        let myBtn = document.getElementById('myBtn');
+        let result = document.getElementById('result');
+        let mind = document.querySelector('input[name="mind"]:checked');
+        console.log(mind);
+
+        myBtn.addEventListener('click', function () {
+
+            // result.innerHTML = `Amy 今天心情 ${happy.value} <br>`
+
+        })
+
+
+    </script>
+</body>
+
+</html>
