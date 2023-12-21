@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col bg-success">123</div>
+            <div class="col bg-success">123</div>
+            <div class="col bg-success">123</div>
+            <div class="col bg-success">123</div>
+            <div class="col bg-success">123</div>
+            <div class="col bg-success">123</div>
+            <div class="col bg-success">123</div>
+            <div class="col bg-success">123</div>
+            <div class="col bg-success">123</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row " id="printSum">
+            <div class="col">123</div>
+        </div>
+    </div>
+
+    <div class="container mt-1">
+
+        <input type="text" name="" id="num1" class="form-control mb-2">
+        <input type="text" name="" id="num2" class="form-control mb-2">
+        <button type="button" id="btnCal" class="btn btn-primary">Cal 送出</button>
+        <button type="button" id="btnCal2" class="btn btn-primary">Cal2 送出</button>
+        <!--  
+        <div class="row">
+            <div id="printSum"></div>
+        </div> -->
+    </div>
+
+
+
+    <script>
+        //綁定
+        let num1 = document.getElementById('num1');
+        let num2 = document.getElementById('num2');
+        let btnCal = document.getElementById('btnCal');
+        let btnCal2 = document.getElementById('btnCal2');
+
+        let printSum = document.getElementById('printSum');
+        // console.log(printSum)
+
+        //事件
+        btnCal.addEventListener('click', function () {
+            // console.log(btn)
+            // .value 獲取的到值為字串，
+            // 但JS會implicit coercion隱式類型轉換，因為在cal(), 有用到運算式 +、*，所以JS會自動將字串轉換數字，
+            // 由於是JS自已判斷，存在著不確定性，最好還是將字串轉為數字
+            let num1Value = Number(num1.value);
+            let num2Value = Number(num2.value);
+            cal(num1Value, num2Value);
+        })
+
+        btnCal2.addEventListener('click', function () {
+            // console.log(btn)
+            let num1Value = Number(num1.value);
+            let num2Value = Number(num2.value);
+            cal2(num1Value, num2Value);
+        })
+
+        function cal(num1, num2) {
+            //當啟始值>終點值
+            // if (num1>num2){
+            //     let changeNum1=0;
+            //     changeNum1 = num1;
+            //     num1=num2;
+            //     num2=changeNum1;
+            // }
+            // JS有 解構賦值(Destructuring Assignment) 功能，
+            // 可以直更換數值，更加簡潔
+            if (num1 > num2) {
+                [num1, num2] = [num2, num1]
+            }
+
+            let print = document.getElementById('print');
+            let result = 0
+            let sum = 0;
+            let prinResult = '';
+            for (let i = num1; i <= num2; i++) {
+                prinResult += `<div class="col border text-center">`
+                for (let k = 1; k <= 9; k++) {
+                    result = i * k
+                    //補零 padStart(位數,'補的字') pad(5,'0') → 字串：6 → '00006'
+                    let resultPad = result.toString().padStart(2, '0');
+                    prinResult += `0${i}*0${k}=<span class ="text-danger">${resultPad}</span><br>`
+                }
+                prinResult += `</div>`;
+            };
+
+            //print.innerHTML = prinResult;
+            printSum.innerHTML = prinResult;
+
+        }
+
+
+        //不是兩位數補零
+        //將數字轉為字串
+        let num = 1
+        let resultString = num.toString();
+        //判斷字串長度
+        if (resultString.length <= 1) {
+            resultString = `0${resultString}`;
+        }
+
+        function cal2(num1, num2) {
+            let print = document.getElementById('print');
+            let result = 0
+            let sum = 0;
+            let prinResult = '';
+
+            for (let i = num1; i <= num2; i++) {
+                prinResult += `<div class="col border text-center">`
+                for (let k = 1; k <= 9; k++) {
+                    result = i * k
+                    //將數字轉為字串
+                    let resultString = result.toString();
+
+                    if (resultString.length <= 1) {
+                        resultString = `0${resultString}`;
+                    }
+                    //判斷字串長度
+                    prinResult += `0${i}*0${k}=<span class ="text-danger">${resultString}</span><br>`
+                }
+                prinResult += `</div>`;
+            };
+            printSum.innerHTML = prinResult;
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
