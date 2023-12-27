@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">品項</th>
+                    <th scope="col">單價</th>
+                    <th scope="col">單項總價</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><img src="https://cdn-icons-png.flaticon.com/128/13371/13371459.png" alt=""></td>
+                    <td><input type="number" id="item1Price" value="100"></td>
+                    <td><input type="number" id="item1Num" value="2"></td>
+                    <td><input type="number" id="item1Total" value=""></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td><img src="https://cdn-icons-png.flaticon.com/128/13371/13371581.png" alt=""></td>
+                    <td><input type="number" id="item2Price" value="200"></td>
+                    <td><input type="number" id="item2Num" value="2"></td>
+                    <td><input type="number" id="item2Total" value=""></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td><img src="https://cdn-icons-png.flaticon.com/128/13371/13371283.png" alt=""></td>
+                    <td><input type="number" id="item3Price" value="300"></td>
+                    <td><input type="number" id="item3Num" value="2"></td>
+                    <td><input type="number" id="item3Total" value=""></td>
+                </tr>
+
+                <tr>
+                    <td colspan="5">
+                        <div class="result" id="result">
+
+                        </div>
+                    </td>
+                    <!-- <td></td>
+                    <td></td>
+                    <td></td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+
+    <button type="button" class="myBtn btn btn-primary btn1" id="btn1">Button 1</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+
+
+    <script>
+        $(function () {
+
+            function cal(num1, num2, num3 = '') {
+                let getPrice = Number(num1.val())
+                let getNum = Number(num2.val())
+                let resultItemtotal = getPrice * getNum
+                console.log(num3)
+                num3.val(resultItemtotal)
+            }
+
+            const item1Price = $('#item1Price')
+            const item1Num = $('#item1Num')
+            const item1Total = $('#item1Total')
+
+            const item2Price = $('#item2Price')
+            const item2Num = $('#item2Num')
+            const item2Total = $('#item2Total')
+
+            const item3Price = $('#item3Price')
+            const item3Num = $('#item3Num')
+            const item3Total = $('#item3Total')
+            const result = $('#result')
+
+            cal(item1Price, item1Num, item1Total);
+
+            cal(item2Price, item2Num, item2Total);
+
+            cal(item3Price, item3Num, item3Total);
+
+            $(item1Price).change(function (e) {
+                cal(item1Price, item1Num, item1Total);
+
+            });
+            $(item1Num).change(function (e) {
+                cal(item1Price, item1Num, item1Total);
+
+            });
+            $(item2Price).change(function (e) {
+                cal(item2Price, item2Num, item2Total);
+
+            });
+            $(item2Num).change(function (e) {
+                cal(item2Price, item2Num, item2Total);
+
+            });
+            $(item3Price).change(function (e) {
+                cal(item3Price, item3Num, item3Total);
+
+            });
+            $(item3Num).change(function (e) {
+                cal(item3Price, item3Num, item3Total);
+
+            });
+
+            $(btn1).click(function (e) {
+                let getitem1Total = Number(item1Total.val());
+                let getitem2Total = Number(item2Total.val());
+                let getitem3Total = Number(item3Total.val());
+                let sumResult = getitem1Total + getitem2Total + getitem3Total
+
+                if (sumResult >= 500) {
+                    sumResult = sumResult * 0.8
+                    let sumResultString = sumResult.toString()
+                    result.text(sumResultString)
+                    result.text(`(${getitem1Total}+${getitem2Total}+${getitem3Total})*0.8=${sumResultString}`)
+                } else {
+                    let sumResultString = sumResult.toString()
+                    result.text(sumResultString)
+                    result.text(`${getitem1Total}+${getitem2Total}+${getitem3Total}=${sumResultString}`)
+                }
+            })
+            result.text(`${item1Total.val()}+${item2Total.val()}+${item3Total.val()}=`)
+        })
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

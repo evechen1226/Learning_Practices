@@ -9,12 +9,41 @@
 
 <body>
 
+    <button type="button" class="btn btn-primary" id="myBtn1">Button</button>
+    <button type="button" class="btn btn-primary" id="myBtn2">Button</button>
+    <button type="button" class="btn btn-primary" id="myBtn3">Button</button>
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
- <script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+
+
+    <script>
+        $(document).ready(function () {
+            const myBtn1 = $('#myBtn1');
+            myBtn1.click(function (e) {
+                console.log('myBtn1')
+            })
+        })
+
+        $(function () {
+            const myBtn2 = $('#myBtn2')
+            myBtn2.click(function (e) {
+                console.log('myBtn2')
+                console.log('$(this)', $(this))
+            })
+        })
+
+        $(function () {
+            const myBtn3 = $('#myBtn3')
+            myBtn3.click(function (e) {
+                $(this).text('clicked')
+                //.innerText = .text('')
+                //.value = .val('')
+            })
+        })
     </script>
 </body>
 
