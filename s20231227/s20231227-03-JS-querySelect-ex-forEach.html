@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">品項</th>
+                    <th scope="col">單價</th>
+                    <th scope="col">單項總價</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><img src="https://cdn-icons-png.flaticon.com/128/13371/13371459.png" alt=""></td>
+                    <td><input type="number" class="price item1" id="chr1" value="500"></td>
+                    <td><input type="number" class="num item1" id="item" value="2"></td>
+                    <td><input type="number" class="sum1" d="sumChr1" value=""></td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td><img src="https://cdn-icons-png.flaticon.com/128/13371/13371283.png" alt=""></td>
+                    <td><input type="number" class="price item2" id="chr2" value="200"></td>
+                    <td><input type="number" class="num item2" id="item2" value="1"></td>
+                    <td><input type="number" class="sum2" d="sumChr3" value=""></td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td><img src="https://cdn-icons-png.flaticon.com/128/13371/13371581.png" alt=""></td>
+                    <td><input type="number" class="price item3" id="chr3" value="300"></td>
+                    <td><input type="number" class="num item3" id="item3" value="4"></td>
+                    <td><input type="number" class="sum3" id="sumChr3" value=""></td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <div class="result" id="result">
+
+                        </div>
+                    </td>
+                    <!-- <td></td>
+                    <td></td>
+                    <td></td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+
+    <button type="button" class="myBtn btn btn-primary btn1" id="btn1">Button 1</button>
+
+
+    <script>
+        const price = document.querySelectorAll('.price')
+        const num = document.querySelectorAll('.num')
+        price.forEach(function (value, key) {
+
+            let getValue = value.innerText
+
+            console.log('getValue', getValue)
+
+            value.addEventListener('change', function () {
+                let priceValue = value.value
+
+            })
+        })
+
+        num.forEach(function (value, key) {
+            let getValue = value.innerText
+
+            console.log('getValue', getValue)
+
+            value.addEventListener('change', function () {
+                let numValue = value.value
+                
+            })
+        })
+
+
+
+
+
+        let chr1 = document.getElementById('chr1')
+        let item = document.getElementById('item')
+        let sumChr1 = document.getElementById('sumChr1')
+        let result = document.getElementById('result')
+
+        function cal(num1, num2) {
+            let price = Number(num1.value)
+            let item = Number(num2.value)
+            let chrResult = price * item
+            sumChr1.value = chrResult
+            return chrResult
+        }
+        cal(chr1, item);
+        result.innerText = (`${chr1.value}+${item.value}=${sumChr1.value}`)
+
+        chr1.addEventListener('change', function () {
+            cal(chr1, item);
+            result.innerText = (`${chr1.value}+${item.value}=${sumChr1.value}`)
+        })
+        item.addEventListener('change', function () {
+            cal(chr1, item); result.innerText = (`${chr1.value}+${item.value}=${sumChr1.value}`)
+        })
+
+
+
+
+        btn1.addEventListener('click', function () {
+
+            let chrResult = cal(chr1, item);
+            let sumResult = 0
+
+            if (chrResult >= 500) {
+                let sumResult = chrResult * 0.8
+                console.log(sumResult)
+                result.innerText = sumResult
+            } else {
+                result.innerText = chrResult.toString()
+            }
+            result.innerText = (`${chr1.value}*${item.value}=${sumChr1.value}`)
+        })
+
+
+
+    </script>
+
+
+</body>
+
+</html>
