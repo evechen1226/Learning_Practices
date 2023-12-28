@@ -14,10 +14,7 @@
             height: 300px;
         }
 
-        .inputBox {
-            width: 300px;
-            height: 100px;
-        }
+
     </style>
 </head>
 
@@ -25,13 +22,17 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="box bg-primary" id="box1"></div>
+                <div class="box bg-secondary" id="box1">box1</div>
             </div>
             <div class="col">
-                <div class="box bg-warning" id="box2"></div>
+                <div class="box2 box bg-warning" id="box2">box2</div>
             </div>
 
-            <button type="button" id="myBtn">myBtn</button>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <button type="button" class="btn btn-primary" id="myBtn">myBtn</button>
+            </div>
         </div>
     </div>
 
@@ -45,43 +46,28 @@
         $(function () {
             const box1 = $('#box1')
             box1.on({
-                Mouseenter: function () {
-                    console.log('box1');
+                mouseenter: function () {
+                    console.log('box1 mouseenter');
                     $(this).attr('class', 'box bg-info');
                 },
-                Mouseleave:function(){
-                    console.log('box1');
-                    $(this).attr('class', 'box bg-waring');
-            },
-            click:function(){
-                console.log('box1');
-                    $(this).attr('class', 'box bg-secondary');
+                mouseleave: function () {
+                    console.log('box1 mouseleave');
+                    $(this).attr('class', 'box bg-danger');
+                },
+                click: function () {
+                    console.log('box1 click');
+                    $(this).attr('class', 'box bg-success');
 
-            }
+                }
+            })
+            const myBtn=$('#myBtn')
+            const box2=$('.box2')
+            myBtn.on({
+                click:function(){
+                    box2.attr('class', 'box bg-success');
+                },
             })
         })
-
-        //mouseout
-        let box2 = document.getElementById('box2');
-        box2.addEventListener('mouseout', function () {
-            console.log('box2');
-            this.setAttribute('class', 'box bg-info');
-
-        })
-        //focus for input：點擊時變色
-        let focus = document.getElementById('focus');
-        focus.addEventListener('focus', function () {
-            this.setAttribute('class', 'inputBox bg-warning')
-        })
-        //blur for input：點擊input外面變色
-        let blur = document.getElementById('blur');
-        blur.addEventListener('blur', function () {
-            this.setAttribute('class', 'inputBox bg-info')
-        })
-
-
-
-
 
     </script>
 
