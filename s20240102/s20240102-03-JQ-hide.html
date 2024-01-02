@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-3 ">
+        <div class="row">
+            <div class="col">
+                <div class="box mx-auto" id="myBox"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col ">
+                <button type="button" class="btn btn-primary" id="hideBtn">hide</button>
+                <button type="button" class="btn btn-info" id="showBtn">show</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+
+
+    <script>
+        $(document).ready(function () {
+            const myBox = $('#myBox');
+            const showBtn = $('#showBtn')
+            const hideBox = $('#hideBtn')
+
+            hideBox.click(function () {
+                myBox.hide();
+            });
+
+            showBtn.click(function () {
+                myBox.show()
+            })
+        })
+    </script>
+
+
+</body>
+
+</html>
