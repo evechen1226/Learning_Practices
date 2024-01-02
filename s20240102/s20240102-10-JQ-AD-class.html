@@ -25,8 +25,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 ">
-                        <button data-page="#page1" data-img="#img1" type="button" class="showBtn w-100 me-3 btn btn-primary"
-                            id="pageBtn1">show/hide</button>
+                        <button data-page="#page1" data-img="#img1" type="button"
+                            class="showBtn w-100 me-3 btn btn-primary" id="pageBtn1">show/hide</button>
                         <div class="conttainer mt-3 page-container" id="page1">
                             <div class="row">
                                 <div class="col">
@@ -60,8 +60,8 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <button data-page="#page2" data-img="#img2" type="button" class="myBtn w-100 me-3 btn btn-primary"
-                            id="pageBtn2">fadein/fadeout</button>
+                        <button data-page="#page2" data-img="#img2" type="button"
+                            class="myBtn w-100 me-3 btn btn-primary" id="pageBtn2">fadein/fadeout</button>
                         <div class="conttainer mt-3 page-container" id="page2">
                             <div class="row">
                                 <div class="col">
@@ -96,8 +96,8 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <button data-page="#page3" data-img="#img3" type="button" class="slideBtn w-100 col me-3 btn btn-primary"
-                            id="pageBtn3">slideDown/slideUP</button>
+                        <button data-page="#page3" data-img="#img3" type="button"
+                            class="slideBtn w-100 col me-3 btn btn-primary" id="pageBtn3">slideDown/slideUP</button>
                         <div class="conttainer mt-3 page-container" id="page3">
                             <div class="row">
                                 <div class="col">
@@ -139,81 +139,154 @@
             <div class="container mt-3 img-container" id="img1"><img src="https://picsum.photos/id/493/300/309" alt="">
             </div>
         </div>
+    </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-            crossorigin="anonymous" referrerpolicy="no-referrer">
-            </script>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12 col-sm-4">
+                <button date-ad="#ad1" date-ani="toggle" class="myBtn btn btn-primary" type="button">toggle
+                    Button</button>
+
+                <div class="text-container" id="ad1">
+                    AD1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda praesentium at accusamus.
+                    Ex
+                    cumque maxime fugit quam sint non cupiditate laboriosam, sequi a odit harum accusantium
+                    perspiciatis.
+                    Assumenda, a.
+                    Aut voluptatum, sunt dolores eaque soluta optio! Delectus debitis quia inventore aperiam animi, enim
+                    ea
+                    recusandae atque deleniti quis reiciendis? Officia saepe quam unde explicabo ea culpa soluta minima
+                    voluptatem.
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <button date-ad="#ad2" date-ani="fadeToggle" class="myBtn btn btn-primary" type="button">toggle
+                    Button</button>
+
+                <div class="text-container" id="ad2">
+                    AD2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda praesentium at accusamus.
+                    Ex
+                    cumque maxime fugit quam sint non cupiditate laboriosam, sequi a odit harum accusantium
+                    perspiciatis.
+                    Assumenda, a.
+                    Aut voluptatum, sunt dolores eaque soluta optio! Delectus debitis quia inventore aperiam animi, enim
+                    ea
+                    recusandae atque deleniti quis reiciendis? Officia saepe quam unde explicabo ea culpa soluta minima
+                    voluptatem.
+                </div>
+            </div>
+            <div class="col-12 col-sm-4">
+                <button date-ad="#ad3" date-ani="slideToggle" class="myBtn btn btn-primary" type="button">toggle
+                    Button</button>
+
+                <div class="text-container" id="ad3">
+                    AD3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum assumenda praesentium at accusamus.
+                    Ex
+                    cumque maxime fugit quam sint non cupiditate laboriosam, sequi a odit harum accusantium
+                    perspiciatis.
+                    Assumenda, a.
+                    Aut voluptatum, sunt dolores eaque soluta optio! Delectus debitis quia inventore aperiam animi, enim
+                    ea
+                    recusandae atque deleniti quis reiciendis? Officia saepe quam unde explicabo ea culpa soluta minima
+                    voluptatem.
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-
-        <!-- 使用 bootstrap 的概念，利用date-set，選取元件。 -->
-        <script>
-            $(document).ready(function () {
-                const myBtn = $('.myBtn')
-                const showBtn=$('.showBtn')
-                const slideBtn=$('.slideBtn')
-                const pageContainer = $('.page-container')
-                const imgContainer = $('.img-container')
-                console.log('myBtn', myBtn);
-
-                // init 初始化狀態
-                pageContainer.hide();
-                imgContainer.hide();
-
-                myBtn.click(function () {
-
-                    console.log('this', this)
-                    console.log('$(this)', $(this))
-
-                    let getDatePage = $(this).attr('data-page')
-                    let getDateImg = $(this).attr('data-img')
-
-                    console.log('getDatePage', getDatePage)
-
-                    pageContainer.fadeOut(2000);
-                    setTimeout(function () {
-                        $(getDatePage).fadeIn(2000);
-                        $(getDateImg).fadeIn();
-                    }, 1000)
-                })
-
-                showBtn.click(function () {
-
-                    console.log('this', this)
-                    console.log('$(this)', $(this))
-
-                    let getDatePage = $(this).attr('data-page')
-                    let getDateImg = $(this).attr('data-img')
-
-                    console.log('getDatePage', getDatePage)
-
-                    pageContainer.hide(2000);
-                    setTimeout(function () {
-                        $(getDatePage).show(0);
-                        $(getDateImg).show();
-                    }, 1000)
-                })
-                
-                slideBtn.click(function () {
-
-                    console.log('this', this)
-                    console.log('$(this)', $(this))
-
-                    let getDatePage = $(this).attr('data-page')
-                    let getDateImg = $(this).attr('data-img')
-
-                    console.log('getDatePage', getDatePage)
-
-                    pageContainer.slideUp(2000);
-                    setTimeout(function () {
-                        $(getDatePage).slideDown(2000);
-                        $(getDateImg).slideDown();
-                    }, 1000)
-                })
-
-            })
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
+
+
+
+    <!-- 使用 bootstrap 的概念，利用date-set，選取元件。 -->
+    <script>
+        $(document).ready(function () {
+            const myBtn = $('.myBtn')
+            const showBtn = $('.showBtn')
+            const slideBtn = $('.slideBtn')
+            const pageContainer = $('.page-container')
+            const imgContainer = $('.img-container')
+            console.log('myBtn', myBtn);
+
+            // init 初始化狀態
+            pageContainer.hide();
+            imgContainer.hide();
+
+            myBtn.click(function () {
+
+                console.log('this', this)
+                console.log('$(this)', $(this))
+
+                let getDatePage = $(this).attr('data-page')
+                let getDateImg = $(this).attr('data-img')
+
+                console.log('getDatePage', getDatePage)
+
+                pageContainer.fadeOut(2000);
+                setTimeout(function () {
+                    $(getDatePage).fadeIn(2000);
+                    $(getDateImg).fadeIn();
+                }, 1000)
+            })
+
+            showBtn.click(function () {
+
+                console.log('this', this)
+                console.log('$(this)', $(this))
+
+                let getDatePage = $(this).attr('data-page')
+                let getDateImg = $(this).attr('data-img')
+
+                console.log('getDatePage', getDatePage)
+
+                pageContainer.hide(2000);
+                setTimeout(function () {
+                    $(getDatePage).show(0);
+                    $(getDateImg).show();
+                }, 1000)
+            })
+
+            slideBtn.click(function () {
+
+                console.log('this', this)
+                console.log('$(this)', $(this))
+
+                let getDatePage = $(this).attr('data-page')
+                let getDateImg = $(this).attr('data-img')
+
+                console.log('getDatePage', getDatePage)
+
+                pageContainer.slideUp(2000);
+                setTimeout(function () {
+                    $(getDatePage).slideDown(2000);
+                    $(getDateImg).slideDown();
+                }, 1000)
+            })
+
+        })
+    </script>
+    <!-- 自動抓取元件 -->
+    <script>
+        $(document).ready(function () {
+            const myBtn = $('.myBtn')
+            myBtn.click(function () {
+                let getDataAD = $(this).attr('data-ad');
+                let getDataAni = $(this).attr('data-ani');
+                console.log('getDataAd', getDataAd);
+                console.log('getDataAni', getDataAni);
+                switch (getDataAni) {
+                    case 'toggle':
+                        $(getDataAD).toggle(3000);
+                        break;
+                
+                }
+            })
+        })
+    </script>
 
 
 </body>
