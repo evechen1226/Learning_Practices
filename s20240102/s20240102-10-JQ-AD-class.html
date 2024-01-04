@@ -144,7 +144,7 @@
     <div class="container mt-3">
         <div class="row">
             <div class="col-12 col-sm-4">
-                <button date-ad="#ad1" date-ani="toggle" class="myBtn btn btn-primary" type="button">toggle
+                <button data-ad="#ad1" data-ani="toggle" class="myBtn2 btn btn-primary" type="button">toggle
                     Button</button>
 
                 <div class="text-container" id="ad1">
@@ -160,7 +160,7 @@
                 </div>
             </div>
             <div class="col-12 col-sm-4">
-                <button date-ad="#ad2" date-ani="fadeToggle" class="myBtn btn btn-primary" type="button">toggle
+                <button data-ad="#ad2" data-ani="fadeToggle" class="myBtn2 btn btn-primary" type="button">toggle
                     Button</button>
 
                 <div class="text-container" id="ad2">
@@ -176,7 +176,7 @@
                 </div>
             </div>
             <div class="col-12 col-sm-4">
-                <button date-ad="#ad3" date-ani="slideToggle" class="myBtn btn btn-primary" type="button">toggle
+                <button data-ad="#ad3" data-ani="slideToggle" class="myBtn2 btn btn-primary" type="button">toggle
                     Button</button>
 
                 <div class="text-container" id="ad3">
@@ -202,7 +202,7 @@
 
 
 
-    <!-- 使用 bootstrap 的概念，利用date-set，選取元件。 -->
+    <!-- 使用 bootstrap 的概念，利用data-set，選取元件。 -->
     <script>
         $(document).ready(function () {
             const myBtn = $('.myBtn')
@@ -221,15 +221,15 @@
                 console.log('this', this)
                 console.log('$(this)', $(this))
 
-                let getDatePage = $(this).attr('data-page')
-                let getDateImg = $(this).attr('data-img')
+                let getDataPage = $(this).attr('data-page')
+                let getDataImg = $(this).attr('data-img')
 
-                console.log('getDatePage', getDatePage)
+                console.log('getDataPage', getDataPage)
 
                 pageContainer.fadeOut(2000);
                 setTimeout(function () {
-                    $(getDatePage).fadeIn(2000);
-                    $(getDateImg).fadeIn();
+                    $(getDataPage).fadeIn(2000);
+                    $(getDataImg).fadeIn();
                 }, 1000)
             })
 
@@ -238,15 +238,15 @@
                 console.log('this', this)
                 console.log('$(this)', $(this))
 
-                let getDatePage = $(this).attr('data-page')
-                let getDateImg = $(this).attr('data-img')
+                let getDataPage = $(this).attr('data-page')
+                let getDataImg = $(this).attr('data-img')
 
-                console.log('getDatePage', getDatePage)
+                console.log('getDataPage', getDataPage)
 
                 pageContainer.hide(2000);
                 setTimeout(function () {
-                    $(getDatePage).show(0);
-                    $(getDateImg).show();
+                    $(getDataPage).show(0);
+                    $(getDataImg).show();
                 }, 1000)
             })
 
@@ -255,15 +255,15 @@
                 console.log('this', this)
                 console.log('$(this)', $(this))
 
-                let getDatePage = $(this).attr('data-page')
-                let getDateImg = $(this).attr('data-img')
+                let getDataPage = $(this).attr('data-page')
+                let getDataImg = $(this).attr('data-img')
 
-                console.log('getDatePage', getDatePage)
+                console.log('getDataPage', getDataPage)
 
                 pageContainer.slideUp(2000);
                 setTimeout(function () {
-                    $(getDatePage).slideDown(2000);
-                    $(getDateImg).slideDown();
+                    $(getDataPage).slideDown(2000);
+                    $(getDataImg).slideDown();
                 }, 1000)
             })
 
@@ -272,17 +272,30 @@
     <!-- 自動抓取元件 -->
     <script>
         $(document).ready(function () {
-            const myBtn = $('.myBtn')
-            myBtn.click(function () {
+            const myBtn2 = $('.myBtn2')
+            const textContainer=$('.text-container')
+            textContainer.hide();
+
+            myBtn2.click(function () {
                 let getDataAD = $(this).attr('data-ad');
                 let getDataAni = $(this).attr('data-ani');
-                console.log('getDataAd', getDataAd);
+                
+                console.log('getDataAd', getDataAD);
                 console.log('getDataAni', getDataAni);
+
                 switch (getDataAni) {
                     case 'toggle':
                         $(getDataAD).toggle(3000);
                         break;
-                
+                    case 'fadeToggle':
+                        $(getDataAD).fadeToggle(3000);
+                        break;
+                    case 'slideToggle':
+                        $(getDataAD).slideToggle(3000);
+                        break;
+                    default:
+                        break;
+
                 }
             })
         })
