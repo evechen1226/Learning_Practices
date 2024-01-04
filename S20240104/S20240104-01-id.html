@@ -16,7 +16,18 @@
 
             <div class="col"><input type="text" class="form-control" name="" id="text1" value="0"></div>
             <div class="col"><input type="text" class="form-control" name="" id="text2" value="0"></div>
-            <div class="col"><input type="text" class="form-control" name="" id="cal" value="+"></div>
+            <div class="col">
+                <!-- <input type="text" class="form-control" name="" id="cal" value="+"> -->
+                <select name="" id="cal" class="form-select">
+                    <option value="0">-</option><!-- 單筆條改 -->
+                    <option value="0">---請選擇---</option> <!-- 修改部份 -->
+                    <option value="1">+</option>
+                    <option value="2">-</option>
+                    <option value="3">*</option>
+                    <option value="4">/</option>
+                </select>
+            </div>
+
             <div class="col"><button type="button" class="btn btn-primary" id="myBtn">call button</button></div>
             <div class="col"> <input type="text" class="form-control" name="" id="sumText"></div>
 
@@ -41,23 +52,23 @@
         myBtn.click(function () {
             let getText1 = Number(text1.val());
             let getText2 = Number(text2.val());
-            let getCal = cal.val();
+            let getCal = Number(cal.val());
+            console.log(getCal)
             let result = 0;
-            
             switch (getCal) {
-                case '+':
+                case 1:
                     result = getText1 + getText2;
                     sumText.val(result);
                     break;
-                case '-':
+                case 2:
                     result = getText1 - getText2;
                     sumText.val(result);
                     break;
-                case '*':
+                case 3:
                     result = getText1 * getText2;
                     sumText.val(result);
                     break;
-                case '/':
+                case 4:
                     result = getText1 / getText2;
                     sumText.val(result);
                     break;
