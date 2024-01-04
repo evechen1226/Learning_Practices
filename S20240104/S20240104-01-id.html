@@ -55,6 +55,11 @@
             let getCal = Number(cal.val());
             console.log(getCal)
             let result = 0;
+
+            if(text1.val()<=0 || text2.val()<=0 ){
+              alert ('請輸入數值')
+              return false;  
+            }
             switch (getCal) {
                 case 1:
                     result = getText1 + getText2;

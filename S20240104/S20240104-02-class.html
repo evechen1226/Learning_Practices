@@ -14,11 +14,11 @@
     <div class="container mt-3">
         <div class="row">
 
-            <div class="col"><input type="text" class="text text1 form-control" value="0"></div>
-            <div class="col"><input type="text" class="text text2 form-control" value="0"></div>
+            <div class="col"><input type="text" class="text text1 form-control" value="0" id="text1"></div>
+            <div class="col"><input type="text" class="text text2 form-control" value="0" id="text2"></div>
             <div class="col"><input date-name="cal" type="text" class="cal form-control" value="+"></div>
             <div class="col">
-                <button date-text1=".text1" date-text2="#text2" type="button" class="myBtn btn btn-primary w-100">call
+                <button date-text1="#text1" date-text2="#text2" type="button" class="myBtn btn btn-primary w-100">call
                     button</button>
             </div>
             <div class="col"> <input type="text" class="sumText form-control"></div>
@@ -39,12 +39,12 @@
             const cal = $('.cal')
             const myBtn = $('.myBtn')
             const sumText = $('.sumText')
-            console.log(text)
+
             console.log(myBtn)
 
             myBtn.click(function () {
-                let getText1 =$((this).attr('date-text1')).val();
-                let getText2 = $($(this).attr('date-text2')).val();
+                let getText1 =Number($($(this).attr('date-text1')).val());
+                let getText2 = Number($($(this).attr('date-text2')).val());
                 let getCal = cal.val();
                 let result = 0;
                 console.log('gettext1 -----', getText1)
