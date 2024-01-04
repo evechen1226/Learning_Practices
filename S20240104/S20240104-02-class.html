@@ -16,9 +16,21 @@
 
             <div class="col"><input type="text" class="text text1 form-control" value="0" id="text1"></div>
             <div class="col"><input type="text" class="text text2 form-control" value="0" id="text2"></div>
-            <div class="col"><input date-name="cal" type="text" class="cal form-control" value="+"></div>
             <div class="col">
-                <button date-text1="#text1" date-text2="#text2" type="button" class="myBtn btn btn-primary w-100">call
+                <!-- <input date-name="cal" type="text" class="cal form-control" value="+"> -->
+                <select name="" id="calOpt" class="cal form-select">
+                    <option value="1">+</option>
+                    <option value="2">-</option>
+                    <option value="3">*</option>
+                    <option value="4">/</option>
+                </select>
+            </div>
+            <div class="col">
+                <button 
+                data-text2="#text2" 
+                data-text1="#text1" 
+                data-cal="#calOpt"
+                type="button" class="myBtn btn btn-primary w-100">call
                     button</button>
             </div>
             <div class="col"> <input type="text" class="sumText form-control"></div>
@@ -34,39 +46,39 @@
         </script>
     <script>
         $(document).ready(function () {
-
-            const text = $('.text')
-            const cal = $('.cal')
+            // 元件綁定使用 const 避免重複設定
             const myBtn = $('.myBtn')
             const sumText = $('.sumText')
 
             console.log(myBtn)
 
             myBtn.click(function () {
-                let getText1 =Number($($(this).attr('date-text1')).val());
-                let getText2 = Number($($(this).attr('date-text2')).val());
-                let getCal = cal.val();
+                let getText1 = Number($($(this).attr('data-text1')).val());
+                let getText2 = Number($($(this).attr('data-text2')).val());
+                let getCalOpt = Number($($(this).attr('data-cal')).val());
                 let result = 0;
+
                 console.log('gettext1', getText1)
+
                 console.log(getText2)
-                console.log(getCal)
+                console.log(getCalOpt)
                 console.log(result)
 
 
-                switch (getCal) {
-                    case '+':
+                switch (getCalOpt) {
+                    case 1:
                         result = getText1 + getText2;
                         sumText.val(result);
                         break;
-                    case '-':
+                    case 2:
                         result = getText1 - getText2;
                         sumText.val(result);
                         break;
-                    case '*':
+                    case 3:
                         result = getText1 * getText2;
                         sumText.val(result);
                         break;
-                    case '/':
+                    case 4:
                         result = getText1 / getText2;
                         sumText.val(result);
                         break;
