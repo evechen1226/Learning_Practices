@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <h3>旅遊網</h3>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="https://picsum.photos/id/287/300/" alt="Card image"
+                        style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">John Doe</h4>
+                        <p class="card-text">Some example text some example text. John Doe is an architect and engineer
+                        </p>
+                        <button type="button" id="myBtn" data-price="1000" data-level="C"
+                            class="btn btn-primary">取得優惠價</button>
+                        <div id="myBox" class="box">
+                            <span id="mySpan"></span>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <div class="col">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="https://picsum.photos/id/701/300/" alt="Card image"
+                        style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">John Doe</h4>
+                        <p class="card-text">Some example text some example text. John Doe is an architect and engineer
+                        </p>
+                        <a href="#" class="btn btn-primary">See Profile</a>
+                    </div>
+                </div>
+                <br>
+            </div>
+            <div class="col">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="https://picsum.photos/id/197/300/" alt="Card image"
+                        style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">John Doe</h4>
+                        <p class="card-text">Some example text some example text. John Doe is an architect and engineer
+                        </p>
+                        <a href="#" class="btn btn-primary">See Profile</a>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <script>
+        $(document).ready(function () {
+            //綁定
+            const myBtn = $('#myBtn')
+            const myBox = $('#myBox')
+            const mySpan = $('#mySpan')
+            //等級
+            const leveObj = {
+                'A': 0.7,
+                'B': 0.8,
+                'C': 0.9,
+            }
+            console.log('levelObj', leveObj);
+
+            //init
+            myBox.hide()
+
+            //event
+            myBtn.click(function () {
+                console.log('myBtn ok')
+                console.log('this', this)
+                let getDataPrice = Number($(this).attr('data-price'));
+                let getDataLevel = $(this).attr('data-level')
+                console.log('getDataPrice', getDataPrice)
+                console.log('getDataLevel', getDataLevel)
+                let result = getDataPrice * leveObj[getDataLevel]
+                console.log('result'.result);
+                $(this).remove();
+                myBox.show();
+                mySpan.text(`原價:${getDataPrice}, 特價:${result}`)
+
+
+            })
+
+        })
+    </script>
+</body>
+
+</html>
