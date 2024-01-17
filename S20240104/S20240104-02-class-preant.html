@@ -11,9 +11,8 @@
 </head>
 
 <body>
-    <div class="container mt-3">
+    <div class="container mt-3 ">
         <div class="rowCal row">
-
             <div class="col"><input type="text" class="text1 form-control" placeholder="請填入數字"></div>
             <div class="col"><input type="text" class="text2 form-control" placeholder="請填入數字"></div>
             <div class="col">
@@ -58,7 +57,10 @@
 
             copyBtn.click(function () {
                 let addRow =rowCal.html()
-                copyBtn.after().append(addRow);
+                let textRow = $(this).parent().parent().parent()
+                console.log(addRow)
+                textRow.append(addRow)
+                
 
 
             })
