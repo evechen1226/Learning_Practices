@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Serialize Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // 當表單提交時
+      $("form").submit(function (event) {
+        // 防止表單正常提交
+        event.preventDefault();
+        
+        // 使用 serialize 方法序列化表單數據
+        var formData = $(this).serializeArray();
+        
+        // 在控制台輸出序列化後的數據
+       
+
+        // 可以將序列化後的數據用於 AJAX 請求等其他操作
+        // $.ajax({
+        //   type: "POST",
+        //   url: "your-api-endpoint",
+        //   data: formData,
+        //   success: function(response) {
+        //     console.log(response);
+        //   },
+        //   error: function(error) {
+        //     console.error(error);
+        //   }
+        // });
+      });
+
+    });
+  </script>
+</head>
+<body>
+
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
