@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"
+        integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+        integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <button class="myBtn col btn btn-primary mx-3 my-3" data-name="綠茶" data-price="10" data-max="10"
+                data-img="292">綠茶</button>
+            <button class="myBtn col btn btn-primary mx-3 my-3" data-name="紅茶" data-price="10" data-max="20"
+                data-img="493">紅茶</button>
+            <button class="myBtn col btn btn-primary mx-3 my-3" data-name="奶茶" data-price="20" data-max="25"
+                data-img="824">奶茶</button>
+            <button class="myBtn col btn btn-primary mx-3 my-3" data-name="咖啡" data-price="30" data-max="30"
+                data-img="976">咖啡</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col border border-dark rounded">
+                <table class="table text-center table-striped align-middle">
+                    <thead>
+                        <tr>
+                            <th width="20%">項目</th>
+                            <th width="20%">單價</th>
+                            <th width="20%">數量</th>
+                            <th width="20%">小計</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="https://picsum.photos/id/292/150/100" alt=""><br>紅茶</td>
+                            <td>10</td>
+                            <!-- max 可以設置可購最大買量，藏在data裡-->
+                            <td><input class="item form-control" type="number" value="1" max="10" min="1"></td>
+                            <td><input class="sumItem form-control" type="text" value=""></td>
+                            <td>
+                                <button class="clone btn btn-success"><i class="fa-solid fa-copy"></i></button>
+                                <button class="del btn btn-danger">刪除</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function (e) {
+            const myBtn = $('.myBtn')
+            const delBtn = $('.del')
+            const item = $('.item')
+            // const sumItem = $('.sumItem')
+
+
+            let myTable = $('table')
+
+
+            //delBtn.click(function (e) {
+            function delFun(nowthis) {
+                console.log('ok')
+                let myTr = $(nowthis).parent().parent()
+                myTr.remove()
+            }
+
+            myBtn.click(function (e) {
+                let img = $(this).data('img')
+                let name = $(this).data('name')
+                let price = $(this).data('price')
+                let max = $(this).data('max')
+                let min = 1
+                let sumItem = price * min
+                console.log(sumItem)
+                let addTd = `
+                 <tr>
+                    <td><img src="https://picsum.photos/id/${img}/150/100" alt=""><br> ${name} </td>
+                    <td> ${price} </td>
+                    <td><input class="item form-control" type="number" value="1" max="${max}" min="${min}"></td>
+                    <td><input class="sumItem form-control" type="text" value="${sumItem}"></td>
+                    <td >
+                         <button class="clone btn btn-success"><i class="fa-solid fa-copy"></i></button>
+                        <button class="del btn btn-danger"><i class="fa-solid fa-trash-can"></i></button></td>
+                 </tr>`
+
+                let myTr = myTable.find('tbody').last()
+
+                myTr.append(addTd)
+
+                addItem = $('.item').last()
+                addItem.change(function (e) {
+                    let itemVal = $(this).val()
+                    let price = $(this).parent().parent().find('td:eq(1)').text()
+                    let res = Number(itemVal) * Number(price)
+                    let sumItem = $(this).parent().parent().find('.sumItem')
+                    sumItem.val(res)
+                    console.log(sumItem)
+
+                })
+                //重新綁定delBtn
+                addDelBtn = $('.del').last()
+                addDelBtn.click(function (e) {
+                    delFun(this)
+                    console.log(this)
+
+                })
+                //clone
+                addCloneBtn = $('.clone')
+                addCloneBtn.click(function (e) {
+                    let cloneTr = $(this).parent().parent()
+                    cloneTr.clone(true).insertAfter(cloneTr);
+
+                    console.log(cloneTr)
+                })
+
+            })
+
+            // item.change(function (e) {
+            //     let sumItem = $('.sumItem')
+            //     let itemVal = $(this).val()
+            //     let price = $(this).parent().parent().find('td:eq(1)').text()
+            //     let res = Number(itemVal) * Number(price)
+            //     console.log(sumItem)
+            //     sumItem.val(res)
+
+            // })
+
+        })
+    </script>
+
+
+</body>
+
+</html>

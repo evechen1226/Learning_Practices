@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let t = $("div").parent().parent().find('td:eq(1)').text();
+            console.log(t)
+        });
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>a</td>
+            <td><div>b</div></td>
+            <td><div>c</div></td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <h1>Welcome to My Homepage</h1>
+
+    <p>My name is Donald (index 0).</p>
+    <p>Donald Duck (index 1).</p>
+    <p>I live in Duckburg (index 2).</p>
+    <p>My best friend is Mickey (index 3).</p>
+    <h1>123</h1>
+
+</body>
+
+</html>
