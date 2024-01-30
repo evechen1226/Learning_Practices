@@ -21,6 +21,21 @@
 
     <div class="container">
         <div class="row">
+            
+            <button class="myBtn col btn btn-primary mx-3 my-3" data-name="綠茶" data-price="10" data-max="10"
+                data-img="292">玫瑰</button>
+
+            <button class="myBtn col btn btn-primary mx-3 my-3" data-name="紅茶" data-price="10" data-max="20"
+                data-img="493">鬱金香</button>
+            <button class="myBtn col btn btn-primary mx-3 my-3" data-name="奶茶" data-price="20" data-max="25"
+                data-img="824">大理花</button>
+            <button class="myBtn col btn btn-primary mx-3 my-3" data-name="咖啡" data-price="30" data-max="30"
+                data-img="976">向日葵</button>
+        </div>
+        <div class="row">
+            <div><img src="./img/f11.jpg" height="200px"></div>
+        </div>
+        <div class="row">
             <button class="myBtn col btn btn-primary mx-3 my-3" data-name="綠茶" data-price="10" data-max="10"
                 data-img="292">綠茶</button>
             <button class="myBtn col btn btn-primary mx-3 my-3" data-name="紅茶" data-price="10" data-max="20"
@@ -72,8 +87,9 @@
             const myBtn = $('.myBtn')
             const delBtn = $('.del')
             const item = $('.item')
+            const img = $('img')
             // const sumItem = $('.sumItem')
-
+            console.log(img)
 
             let myTable = $('table')
 
@@ -84,6 +100,13 @@
                 let myTr = $(nowthis).parent().parent()
                 myTr.remove()
             }
+            img.hide()
+
+            myBtn.hover(function () {
+                img.hide()
+                img.fadeIn()
+            }
+            )
 
             myBtn.click(function (e) {
                 let img = $(this).data('img')
@@ -105,6 +128,7 @@
                  </tr>`
 
                 let myTr = myTable.find('tbody').last()
+                console.log(myTr)
 
                 myTr.append(addTd)
 
