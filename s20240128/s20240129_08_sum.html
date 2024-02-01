@@ -50,8 +50,38 @@
     height: 60vh;
     overflow: auto;
   }
-  .table-f{
+
+  .table-f {
     width: 80%;
+  }
+
+  .table-hover tbody tr:hover td,
+  .table-hover tbody tr:hover th {
+    background-color: rgb(255, 238, 250);
+  }
+
+  .text-palevioletred {
+    color: palevioletred;
+  }
+
+  .text-p {
+    color: palevioletred;
+  }
+
+  .sumbackground {
+
+    background: linear-gradient(to top, #e9fcf3, white, #e9fcf3);
+    transition: background 0.3s ease;
+    /* 添加渐变过渡效果 */
+
+  }
+
+  .text-space {
+    letter-spacing: 5px;
+  }
+
+  .btn-warning {
+    background-color: rgb(255, 255, 152);
   }
 </style>
 
@@ -60,58 +90,62 @@
   <div class="container mt-3">
     <div class="row">
       <div class="col-md-2 p-0">
-            <div class="p-0 m-0">
-              <img class="img-fluid" src="./img/logo.png">
-            </div>
+        <div class="p-0 m-0 ">
+          <img class="img-fluid" src="./img/logo.png">
+        </div>
       </div>
       <div class="col-md-4">
         <div class="container">
-          <div class="row mt-3">
-            <div class="col">
-              <button type="button" class="btn-f myBtn btn btn-primary" data-name="大理花" data-price="100" data-img="f11">
-                大理花
-              </button>
-              <button type="button" class="myBtn btn btn-primary" data-name="玫瑰" data-price="80" data-img="f22">
-                玫瑰
-              </button>
-              <button type="button" class="myBtn btn btn-primary" data-name="向日葵" data-price="200" data-img="f33">
-                向日葵
-              </button>
-              <button type="button" class="myBtn btn btn-primary" data-name="鬱金香" data-price="100" data-img="f44">
-                鬱金香
-              </button>
-            </div>
+          <div class="row m-0 mt-1 text-uppercase fw-bolder text-palevioletred">主花</div>
+          <div class="row">
 
+            <button type="button" class="col mx-2 btn-f myBtn btn btn-danger " data-name="大理花" data-price="100"
+              data-img="f11" data-max="50">
+              大理花
+            </button>
+            <button type="button" class="col mx-2 btn-f myBtn btn btn-danger" data-name="玫瑰" data-price="80"
+              data-img="f22" data-max="20">
+              玫瑰
+            </button>
+            <button type="button" class="col mx-2 btn-f myBtn btn btn-danger" data-name="向日葵" data-price="200"
+              data-img="f33" data-max="25">
+              向日葵
+            </button>
+            <button type="button" class="col mx-2 btn-f myBtn btn btn-danger" data-name="鬱金香" data-price="100"
+              data-img="f44" data-max="30">
+              鬱金香
+            </button>
           </div>
-          <div class="row mt-3">
-            <div class="col">
-              <button type="button" class="myBtn btn btn-success" data-name="蝴蝶" data-price="120" data-img="35"
-                data-id="1">
-                蝴蝶
-              </button>
-              <button type="button" class="myBtn btn btn-success" data-name="龜背芋" data-price="65" data-img="36">
-                龜背芋
-              </button>
-              <button type="button" class="myBtn btn btn-success" data-name="禮物" data-price="50" data-img="37">
-                禮物
-              </button>
-              <button type="button" class="myBtn btn btn-success" data-name="雪花" data-price="50" data-img="37">
-                雪花
-              </button>
-            </div>
+          <div class="row m-0 mt-1 text-uppercase fw-bolder text-success">包裝紙花樣</div>
+
+          <div class="row">
+
+            <button type="button" class="col mx-2 myBtn btn btn-success" data-name="蝴蝶" data-price="50" data-img="d11" data-id="1" data-max="30">
+              蝴蝶
+            </button>
+            <button type="button" class="col mx-2 myBtn btn btn-success" data-name="龜背芋" data-price="65" data-img="d22" data-max="20">
+              龜背芋
+            </button>
+            <button type="button" class="col mx-2 myBtn btn btn-success" data-name="禮物" data-price="30" data-img="d33" data-max="10">
+              禮物
+            </button>
+            <button type="button" class="col mx-2 myBtn btn btn-success" data-name="雪花" data-price="55" data-img="d44" data-max="50">
+              雪花
+            </button>
+
           </div>
         </div>
       </div>
       <div class="col-md-4 p-0">
         <div class="container">
-          <div class="row">
-            <div class="col-md-6 img-h p-0 m-0">
-              <img class="img-fluid rounded-4 h-100" src="./img/f11.jpg">
+          <div id="img1" class="row ">
+            <div class="col-md-6 img-h py-3 m-0 ">
+              <img class="img-fluid rounded-4 h-100 float-end shadow" src="./img/f11.jpg">
             </div>
-            <div class="col-md-4 ms-3 p-0 m-0">
+            <div class="col-md-4 ms-3 pt-3 m-0">
               價格：100
               <br>
-              庫存：25
+              庫存：50
             </div>
           </div>
         </div>
@@ -121,58 +155,63 @@
     </div>
   </div>
 
-
-  <div class="container item rounded-3">
-    <table class="table table-hover align-middle text-center ">
-      <thead>
-        <tr>
-          <th width="30%">項目</th>
-          <th width="12%">單價</th>
-          <th width="12%">數量</th>
-          <th width="12%">小計</th>
-          <th width="20%">備註</th>
-          <th width="" class="text-start">操作</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <img class="rounded-circle" src="./img/f11.jpg" alt="" height="80px" width="80px">
-            大理花
-          </td>
-          <td class="text-start">
-            單價 <span>132</span>元
-          </td>
-          <td>
-            <div class="mb-3">
-              <input type="number" class="quantity form-control" id="" max="20" min="1" value="1">
+  <div class="container p-0 bg-white">
+    <div class="container m-0 p-0 item rounded-3">
+      <table class="table table-hover align-middle text-center">
+        <thead>
+          <tr>
+            <th width="30%">項目</th>
+            <th width="12%">單價</th>
+            <th width="12%">數量</th>
+            <th width="12%">小計</th>
+            <th width="20%">備註</th>
+            <th width="">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td>
+              <img class="rounded-circle" src="./img/f11.jpg" alt="" height="80px" width="80px">
+              大理花
+            </td>
+            <td class="text-start">
+              單價 <span>132</span>元
+            </td>
+            <td>
+              <div class="mb-3">
+                <input type="number" class="quantity form-control" id="" max="20" min="1" value="1">
+              </div>
+            </td>
+            <td>
+              小計 : <span class="myTotal">123</span>
+            </td>
+            <td class="">
+              <input type="checkbox" name="" value="紅">
+              <label for="huey">紅</label>
+              <input type="checkbox" name="" value="藍">
+              <label for="huey">藍</label>
+              <input type="checkbox" name="" value="黃">
+              <label for="huey">黃</label>
+            </td>
+            <td class="text-center">
+              <button type="button" class="cloneBtn btn btn-primary"><i class="fa-regular fa-paste"></i></button>
+              <button type="button" class="delBtn btn btn-danger"><i class="fa-regular fa-trash-can"></i></button>
+            </td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+    <div class="container m-0 shadow sumbackground">
+      <div class="row">
+        <div class="col">
+          <div class="fs-5 p-2 fw-bolder mb-1 d-flex align-items-center justify-content-end text-space">
+            <div class="fs-6 text-start me-5 text-p">
+              滿 500 元，即可獲得 20 % OFF !!
             </div>
-          </td>
-          <td>
-            小計 : <span class="myTotal">123</span>
-          </td>
-          <td class="">
-            <input type="checkbox" name="" value="紅">
-            <label for="huey">紅</label>
-            <input type="checkbox" name="" value="藍">
-            <label for="huey">藍</label>
-            <input type="checkbox" name="" value="黃">
-            <label for="huey">黃</label>
-          </td>
-          <td class="text-start">
-            <button type="button" class="cloneBtn btn btn-warning">Clone</button>
-            <button type="button" class="delBtn btn btn-danger">Del</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="container-fluid mt-3">
-    <div class="row">
-      <div class="col">
-        <div class="text-center">
-          合計 : <span id="mySum" class="display-4">0</span> NT.
+            共<span id="myCount" class="fs-2 text-danger ">0</span>項，合計 : NT$ <span id="mySum"
+              class="fs-2  text-danger ">0</span> 元。
+            <button class="btnCal btn btn-warning btn-lg " style="width: 229px;">結帳</button>
+          </div>
         </div>
       </div>
     </div>
@@ -189,6 +228,14 @@
     <div class="flower"></div>
     <div class="flower"></div>
     <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+
     <div class="flower"></div>
     <div class="flower"></div>
     <div class="flower"></div>
@@ -231,15 +278,17 @@
         let getMyTotalCount = myTotal.length;
         console.log('myTotal', myTotal);
         let sum = 0;
+        let idx = 0
         myTotal.each(function (index, value) {
           console.log('index', index);
           console.log('value', value);
           sum = sum + Number($(value).text());
+          idx = index
         });
         console.log('final sum', sum);
+        myCount.text(idx)
         mySum.text(sum);
       }
-
 
       function delFun(nowThis) {
         console.log('del ok');
@@ -258,7 +307,9 @@
 
       const myBtn = $('.myBtn');
       const mySum = $('#mySum');
+      const myCount = $('#myCount');
       const sumBtn = $('#sumBtn');
+      const btnCal = $('.btnCal')
       let delBtn = $('.delBtn');
       let cloneBtn = $('.cloneBtn');
 
@@ -278,15 +329,52 @@
         delFun(this);
       });
 
+      btnCal.click(function () {
+        console.log(mySum.text())
+        let calSum = parseFloat(mySum.text()) 
+        let calTotal=0
+        if (calSum >= 500) {
+          calTotal=Math.round(calSum * 0.8)
+          alert(`恭喜消費金額達到 500 元，獲得 8 折，最後金額為 ${calTotal} 元
+          `)
+        } else {
+          calTotal = 500-calSum
+          alert(`很可惜距離消費金額 500 元，只差 ${calTotal} 元`)
+
+        }
+      })
+      myBtn.hover(function (e) {
+        let name = $(this).attr('data-name');
+        let price = $(this).attr('data-price');
+        let maxItem = $(this).attr('data-max');
+        let imgUrl = $(this).attr('data-img');
+        let img = `            
+            <div  class="col-md-6 img-h py-3 m-0 ">
+              <img  class="img-fluid rounded-4 h-100 float-end shadow border border-3 border-white" src="./img/${imgUrl}.jpg">
+            </div>
+            <div class="col-md-4 ms-3 pt-3 m-0">
+              品名：${name}
+              <br>
+              價格：${price}
+              <br>
+              庫存：${maxItem}
+            </div>
+`
+        let text = $('#img1').html(img)
+        console.log(text)
+      })
+
       myBtn.click(function (e) {
         let name = $(this).attr('data-name');
         let price = $(this).attr('data-price');
         let imgUrl = $(this).attr('data-img');
-        console.log('img', imgUrl)
+                let maxItem = $(this).attr('data-max');
+
+        console.log('p', price)
         let content = `
         <tr>
           <td>
-            <img class="rounded-circle" src="./img/${imgUrl}.jpg" alt="" height="80px" width="80px">
+            <img class="rounded-circle" src="./img/${imgUrl}.jpg" alt="" height="80px" width="120px">
             ${name}
           </td>
           <td class="text-start">
@@ -294,11 +382,11 @@
           </td>
           <td>
             <div class="mb-3">
-              <input type="number" class="quantity form-control" id="" max="20" min="1" value="1">
+              <input type="number" class="quantity form-control" id="" max="${maxItem}" min="1" value="1">
             </div>
           </td>
           <td>
-            小計 : <span class="myTotal"> </span>
+            小計 : <span class="myTotal">${price}</span>
           </td>
           <td class="">
             <input type="checkbox" name="" value="紅">
@@ -308,9 +396,9 @@
             <input type="checkbox" name="" value="黃">
             <label for="huey">黃</label>
           </td>
-          <td class="text-start">
-            <button type="button" class="cloneBtn btn btn-warning">Clone</button>
-            <button type="button" class="delBtn btn btn-danger">Del</button>
+          <td class="text-center">
+            <button type="button" class="cloneBtn btn btn-primary"><i class="fa-regular fa-paste"></i></button>
+            <button type="button" class="delBtn btn btn-danger"><i class="fa-regular fa-trash-can"></i></button>
           </td>
         </tr>
         `;

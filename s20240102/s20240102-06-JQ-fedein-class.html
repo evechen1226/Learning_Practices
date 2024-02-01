@@ -125,54 +125,54 @@
             <div class="container mt-3 img-container" id="img1"><img src="https://picsum.photos/id/493/300/309" alt="">
             </div>
         </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-            crossorigin="anonymous" referrerpolicy="no-referrer">
-            </script>
 
 
+    <!-- 使用 bootstrap 的概念，利用date-set，選取元件。 -->
+    <script>
+        $(document).ready(function () {
+            const myBtn = $('.myBtn')
+            const pageContainer = $('.page-container')
+            const imgContainer = $('.img-container')
+            console.log('myBtn', myBtn);
 
-        <!-- 使用 bootstrap 的概念，利用date-set，選取元件。 -->
-        <script>
-            $(document).ready(function () {
-                const myBtn = $('.myBtn')
-                const pageContainer = $('.page-container')
-                const imgContainer = $('.img-container')
-                console.log('myBtn', myBtn);
+            // init 初始化狀態
+            pageContainer.hide();
+            imgContainer.hide();
 
-                // init 初始化狀態
-                pageContainer.hide();
-                imgContainer.hide();
+            myBtn.click(function () {
 
-                myBtn.click(function () {
+                console.log('this', this)
+                console.log('$(this)', $(this))
 
-                    console.log('this', this)
-                    console.log('$(this)', $(this))
+                let getDatePage = $(this).attr('data-page')
+                let getDateImg = $(this).attr('data-img')
 
-                    let getDatePage = $(this).attr('data-page')
-                    let getDateImg = $(this).attr('data-img')
+                console.log('getDatePage', getDatePage)
 
-                    console.log('getDatePage', getDatePage)
+                pageContainer.fadeOut(2000);
+                setTimeout(function () {
+                    $(getDatePage).fadeIn(2000);
+                    $(getDateImg).fadeIn();
+                }, 2000)
 
-                    pageContainer.fadeOut(2000);
-                    setTimeout(function () {
-                        $(getDatePage).fadeIn(2000);
-                        $(getDateImg).fadeIn();
-                    }, 2000)
-
-                    //callback function()
-                    // pageContainer.hide('slow', function () {
-                    // $(getDatePage).fadeIn(3000);
-                    //  alert('123');
-                    //   $(getDatePage).fadeIn(3000);
-                    // });
-
-                })
-
+                //callback function()
+                // pageContainer.hide('slow', function () {
+                // $(getDatePage).fadeIn(3000);
+                //  alert('123');
+                //   $(getDatePage).fadeIn(3000);
+                // });
 
             })
-        </script>
+
+
+        })
+    </script>
 
 
 </body>
