@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="./css/f.css">
+</head>
+<style>
+  body {
+    background-color: hsl(0, 0%, 92%);
+  }
+
+  .btn-f {
+    background-color: palevioletred;
+    border: 1px solid palevioletred;
+  }
+
+  .btn-f:hover {
+    background-color: rgb(202, 17, 79);
+    border: 1px solid rgb(202, 17, 79);
+  }
+
+  .img-h {
+    height: 150px;
+  }
+
+  .container {
+    z-index: 100;
+  }
+
+  .container-flower {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: -1;
+    background-color: hsl(0, 0%, 92%);
+
+  }
+
+  .item {
+    height: 60vh;
+    overflow: auto;
+  }
+  .table-f{
+    width: 80%;
+  }
+</style>
+
+<body>
+
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col-md-2 p-0">
+            <div class="p-0 m-0">
+              <img class="img-fluid" src="./img/logo.png">
+            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="container">
+          <div class="row mt-3">
+            <div class="col">
+              <button type="button" class="btn-f myBtn btn btn-primary" data-name="大理花" data-price="100" data-img="f11">
+                大理花
+              </button>
+              <button type="button" class="myBtn btn btn-primary" data-name="玫瑰" data-price="80" data-img="f22">
+                玫瑰
+              </button>
+              <button type="button" class="myBtn btn btn-primary" data-name="向日葵" data-price="200" data-img="f33">
+                向日葵
+              </button>
+              <button type="button" class="myBtn btn btn-primary" data-name="鬱金香" data-price="100" data-img="f44">
+                鬱金香
+              </button>
+            </div>
+
+          </div>
+          <div class="row mt-3">
+            <div class="col">
+              <button type="button" class="myBtn btn btn-success" data-name="蝴蝶" data-price="120" data-img="35"
+                data-id="1">
+                蝴蝶
+              </button>
+              <button type="button" class="myBtn btn btn-success" data-name="龜背芋" data-price="65" data-img="36">
+                龜背芋
+              </button>
+              <button type="button" class="myBtn btn btn-success" data-name="禮物" data-price="50" data-img="37">
+                禮物
+              </button>
+              <button type="button" class="myBtn btn btn-success" data-name="雪花" data-price="50" data-img="37">
+                雪花
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 p-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 img-h p-0 m-0">
+              <img class="img-fluid rounded-4 h-100" src="./img/f11.jpg">
+            </div>
+            <div class="col-md-4 ms-3 p-0 m-0">
+              價格：100
+              <br>
+              庫存：25
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="container item rounded-3">
+    <table class="table table-hover align-middle text-center ">
+      <thead>
+        <tr>
+          <th width="30%">項目</th>
+          <th width="12%">單價</th>
+          <th width="12%">數量</th>
+          <th width="12%">小計</th>
+          <th width="20%">備註</th>
+          <th width="" class="text-start">操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <img class="rounded-circle" src="./img/f11.jpg" alt="" height="80px" width="80px">
+            大理花
+          </td>
+          <td class="text-start">
+            單價 <span>132</span>元
+          </td>
+          <td>
+            <div class="mb-3">
+              <input type="number" class="quantity form-control" id="" max="20" min="1" value="1">
+            </div>
+          </td>
+          <td>
+            小計 : <span class="myTotal">123</span>
+          </td>
+          <td class="">
+            <input type="checkbox" name="" value="紅">
+            <label for="huey">紅</label>
+            <input type="checkbox" name="" value="藍">
+            <label for="huey">藍</label>
+            <input type="checkbox" name="" value="黃">
+            <label for="huey">黃</label>
+          </td>
+          <td class="text-start">
+            <button type="button" class="cloneBtn btn btn-warning">Clone</button>
+            <button type="button" class="delBtn btn btn-danger">Del</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="container-fluid mt-3">
+    <div class="row">
+      <div class="col">
+        <div class="text-center">
+          合計 : <span id="mySum" class="display-4">0</span> NT.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-flower">
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    const flowers = document.querySelectorAll(".flower");
+    flowers.forEach((flower) => {
+      flower.style.setProperty("--speed", (2 + 2 * Math.random()) + "s");
+      flower.style.setProperty("--transform", "scale(" + (0.4 + 0.5 * Math.random()) + ")");
+      flower.style.setProperty("--stem", (110 + 40 * Math.random()));
+      flower.style.setProperty("--flower", (250 + 180 * Math.random()));
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      function sumFun() {
+        console.log('sumBtn ok');
+        let myTotal = $('.myTotal');
+        let getMyTotalCount = myTotal.length;
+        console.log('myTotal', myTotal);
+        let sum = 0;
+        myTotal.each(function (index, value) {
+          console.log('index', index);
+          console.log('value', value);
+          sum = sum + Number($(value).text());
+        });
+        console.log('final sum', sum);
+        mySum.text(sum);
+      }
+
+
+      function delFun(nowThis) {
+        console.log('del ok');
+        let nowTr = $(nowThis).parent().parent();
+        nowTr.remove();
+        sumFun();
+      }
+
+      function cloneFun(nowThis) {
+        console.log('clone ok');
+        let nowTr = $(nowThis).parent().parent();
+        console.log('nowTr', nowTr)
+        nowTr.clone(true).insertAfter(nowTr);
+        sumFun();
+      }
+
+      const myBtn = $('.myBtn');
+      const mySum = $('#mySum');
+      const sumBtn = $('#sumBtn');
+      let delBtn = $('.delBtn');
+      let cloneBtn = $('.cloneBtn');
+
+
+      //sumBtn click
+      sumBtn.click(function (e) {
+        sumFun();
+      });
+
+      // init cloneBtn
+      cloneBtn.click(function (e) {
+        cloneFun(this);
+      });
+
+      // init delBtn
+      delBtn.click(function (e) {
+        delFun(this);
+      });
+
+      myBtn.click(function (e) {
+        let name = $(this).attr('data-name');
+        let price = $(this).attr('data-price');
+        let imgUrl = $(this).attr('data-img');
+        console.log('img', imgUrl)
+        let content = `
+        <tr>
+          <td>
+            <img class="rounded-circle" src="./img/${imgUrl}.jpg" alt="" height="80px" width="80px">
+            ${name}
+          </td>
+          <td class="text-start">
+            單價 <span>${price}</span>元
+          </td>
+          <td>
+            <div class="mb-3">
+              <input type="number" class="quantity form-control" id="" max="20" min="1" value="1">
+            </div>
+          </td>
+          <td>
+            小計 : <span class="myTotal"> </span>
+          </td>
+          <td class="">
+            <input type="checkbox" name="" value="紅">
+            <label for="huey">紅</label>
+            <input type="checkbox" name="" value="藍">
+            <label for="huey">藍</label>
+            <input type="checkbox" name="" value="黃">
+            <label for="huey">黃</label>
+          </td>
+          <td class="text-start">
+            <button type="button" class="cloneBtn btn btn-warning">Clone</button>
+            <button type="button" class="delBtn btn btn-danger">Del</button>
+          </td>
+        </tr>
+        `;
+
+        $('tbody').append(content);
+
+        addDelBtn = $('.delBtn').last();
+        addCloneBtn = $('.cloneBtn').last();
+        addQuantity = $('.quantity').last();
+
+        sumFun();
+
+        // addDelBtn
+        addDelBtn.click(function (e) {
+          delFun(this);
+        });
+
+        // addCloneBtn
+        addCloneBtn.click(function (e) {
+          cloneFun(this);
+        });
+
+        // addQuantity
+        addQuantity.change(function (e) {
+          let getQuantity = Number($(this).val());
+          let closestQuantityTr = $(this).parent().parent().parent();
+          let findTotal = closestQuantityTr.find('.myTotal');
+          console.log('closestQuantityTr', closestQuantityTr);
+          console.log('getQuantity', getQuantity);
+          let total = getQuantity * price;
+          console.log('total', total);
+          findTotal.text(total);
+
+          sumFun();
+        });
+
+      });
+    });
+
+  </script>
+</body>
+
+</html>

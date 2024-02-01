@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --transform: scale(0.8);
+            --speed: 2s;
+            --stem: 90;
+            --flower: 300;
+        }
+
+        .container-flower {
+            background-color: hsl(42, 100%, 82%);
+            display: flex;
+            justify-content: center;
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .flower {
+            animation: swing var(--speed) ease infinite alternate both;
+            position: relative;
+            transform-origin: 50% 100%;
+            width: 2rem;
+
+            &::before {
+                animation: before 3s ease infinite alternate both;
+                bottom: 7rem;
+                content: "✿";
+                color: hsl(var(--flower), 80%, 70%);
+                font-size: 4rem;
+                left: 0;
+                position: absolute;
+                -webkit-text-stroke: 3px;
+            }
+
+            &::after {
+                bottom: -3rem;
+                color: hsl(var(--stem), 50%, 60%);
+                content: "(";
+                font-size: 6rem;
+                font-weight: bold;
+                left: 0;
+                position: absolute;
+                transform: rotate(60deg) skew(60deg) scale(1.2, 1.8);
+            }
+        }
+
+        .flower:nth-child(3n) {
+            animation: swingLeft var(--speed) ease infinite alternate both;
+
+            &::before {
+                animation: beforeLeft var(--speed) ease infinite alternate both;
+            }
+
+            &::after {
+                content: ")";
+                left: 1.5rem;
+                bottom: -4.5rem;
+            }
+        }
+
+        @keyframes swingLeft {
+            0% {
+                transform: var(--transform) rotate(0deg);
+            }
+
+            100% {
+                transform: var(--transform) rotate(7deg);
+            }
+        }
+
+        @keyframes beforeLeft {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(7deg);
+            }
+        }
+
+        @keyframes swing {
+            0% {
+                transform: var(--transform) rotate(0deg);
+            }
+
+            100% {
+                transform: var(--transform) rotate(-7deg);
+            }
+        }
+
+        @keyframes before {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(-7deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-flower">
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+        <div class="flower"></div>
+    </div>
+    <script>
+        const flowers = document.querySelectorAll(".flower");
+        flowers.forEach((flower) => {
+            flower.style.setProperty("--speed", (2 + 2 * Math.random()) + "s");
+            flower.style.setProperty("--transform", "scale(" + (0.4 + 0.5 * Math.random()) + ")");
+            flower.style.setProperty("--stem", (110 + 40 * Math.random()));
+            flower.style.setProperty("--flower", (250 + 180 * Math.random()));
+        });
+    </script>
+</body>
+
+</html>
