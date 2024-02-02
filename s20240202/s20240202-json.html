@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"
+        integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+        integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <button class="" onclick="">php</button>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        // 1.檢查一維陣列
+
+        // 2.檢查二維陣列
+        let objPhone = [
+            {
+                'id': 1,
+                'name': 'iphone 10',
+                '價格': 10000,
+                '分店': '台北',
+            },
+            {
+                'id': 2,
+                'name': 'iphone 11',
+                '價格': 20000,
+                '分店': ['台北', '台中'],
+            },
+            {
+                'id': 3,
+                'name': 'iphone 12',
+                '價格': 30000,
+                '分店': '高雄',
+            },
+            {
+                'id': 41,
+                'name': 'iphone 13',
+                '價格': 40000,
+                '分店': ['台北', '台中', '高雄'],
+            },
+
+        ]
+        console.log(objPhone)
+        objPhone.forEach(element => {
+            console.log(element)
+        });
+
+        // 3.測試AJAX連結
+        let url = './php_Phone.php'
+        // 4.到php檢查陣列
+
+        // 5.連結資料，一定要用xampp才可以看到檔案
+        $.ajax({
+            type: "get",
+            url: url,
+            // data: "",
+            dataType: "json",
+            success: function (res) {
+                console.log('res-json', res)
+            }
+        });
+
+    </script>
+</body>
+
+</html>
