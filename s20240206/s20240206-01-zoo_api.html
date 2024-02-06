@@ -25,16 +25,13 @@
                         <tr>
                             <th width="5%" class="text-center">ID</th>
                             <th class="text-start">城市</th>
-                            <th class="text-start">前12時/溫度/天氣</th>
-                            <th class="text-start">12時/溫度/天氣</th>
-                            <th class="text-start">後12時/溫度/天氣</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- <tr>
+                        <tr>
                             <td></td>
                             <td></td>
-                        </tr> -->
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -46,46 +43,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="../s20240206/ignore/js/weatherApi.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
-<!-- <img src="./weather_svg/01.svg" alt="" srcset=""> -->
+
+    <script src="../s20240206/ignore/js/weatherApi.js"></script>
+
     <script>
         $(document).ready(function () {
-            // let weatherApi = "";
+            let url = 'https://rickandmortyapi.com/api/character/4'
 
             $.ajax({
                 type: "GET",
-                url: weatherApi,
+                url: url,
                 // data: "data",
                 // dataType: "json",
                 success: function (res) {
                     console.log(res)
-                    // console.log(res['records']['datasetDescription'])
-                    let nowLocation = res.records.location
-                    // console.log(nowLocation)
+                    // console.log(res.episode)
+                    let nowLocation = res.records
+                    console.log('records',nowLocation)
 
                     $.each(nowLocation, function (key, value) {
                         // console.log(key)
                         // console.log(value)
                         // console.log(value.locationName)
-                        let nowLocationName = value.locationName
+                        let nowLocationName = value.location
+                        console.log(nowLocationName)
                         let nowID = key + 1
                         let stringID = nowID.toString().padStart(2, "0")
-                        
-                        for (let i = 0; i <= 2; i++) {
-                        let nowLocationMaxT = value.weatherElement[4]['time'][i]['parameter']['parameterName'];
-                        let nowLocationMinT = value.weatherElement[4]['time'][i]['parameter']['parameterName'];
-                        let svgText = value.weatherElement[0]['time'][i]['parameter']['parameterName'];
-                        let svgName = value.weatherElement[0]['time'][i]['parameter']['parameterValue'].toString().padStart(2, "0");
-                        console.log('svg', svgName)
-                        let content = `                        
+                        let content = `
+                        <tr>
+                            <td  class="text-center">${stringID}</td>
                         <td>${nowLocationName}</td>
-                        <td>${nowLocationMaxT} - ${nowLocationMinT} 度 ${svgText}<br><img src="./weather_svg/${svgName}.svg" alt=""></td>
+                        </tr>
                         `
-                        // <td>${svgText}<br><img src="./svg/${svgText}.svg" alt=""></td>
-                        let tr=`<tr><td  class="text-center">${stringID}</td>${content}</tr>`
-                        $('tbody').append(tr)
- }
+                        $('tbody').append(content)
+
                     })
                     $('table').DataTable()
                     // let nowWeatherElmt = nowLocation[0].weatherElement[0].time[0].parameter
