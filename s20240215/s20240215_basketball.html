@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"
+        integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+        integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .box {
+            width: 500px;
+            height: 50vh;
+        }
+
+        .box2 {
+            height: 10vh;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col my-5 text-center">
+                <h1>投籃大賽</h1>
+                <div class="box col-1 border p-3 text-center h-100 d-flex flex-column justify-content-between mx-auto">
+                    <div class="title">
+                        <h3>分數</h3>
+                    </div>
+                    <div class="text-success fs-5">
+                        歷史分數 <span class="scroe "></span>
+                    </div>
+                    <div class="click text-danger fs-3">
+                        0
+                    </div>
+                    <div class="time border-top p-3 fs-3">
+                        時間
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3 text-center">
+        <div class="row mx-auto">
+            <div class="col ">
+                <div class="box box2 border">
+                    <button type="button" class="start btn btn-primary">開始</button>
+                    <button type="button" class="shoot btn btn-success" style="display: none;">投籃</button>
+                    <button type="button" class="close btn btn-danger" style="display: none;">結束</button>
+                    <button type="button" class="reast btn btn-secondary">重置</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col img" style="display: none;">
+                <img src="./img/undraw_basketball_re_7701.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function () {
+            const startBtn = $('.start')
+            const closeBtn = $('.close')
+            const raestBtn = $('.reast')
+            const clickTimes = $('.click')
+            const shootBtn = $('.shoot')
+            const timeDiv = $('.time')
+            const scroe = $('.scroe')
+            const img = $('.img')
+
+            console.log(scroe)
+            let sum = 0
+            let time = 6
+            let scroeBest = 0
+            // let scroeBest = localStorage.getItem("highScore");
+            // scroe.text(highScore);
+
+            startBtn.click(function () {
+                startBtn.hide()
+                shootBtn.show()
+                const myInterval = setInterval(() => {
+                    if (time <= 3) {
+                        img.show()
+                    }
+                    if (time <= 0) {
+                        if (sum > scroeBest) {
+                            scroe.text(sum)
+                            // 可以使用 localStorage.getItem("heightscroe",sum);
+                            // localStorage 的資料會永久保存，直到被使用者清除。
+                        }
+                        clearInterval(myInterval)
+                        shootBtn.hide()
+                        closeBtn.show()
+                        img.hide()
+                    }
+                    timeDiv.text(time)
+                    time = time - 1
+                }, 1000)
+            })
+
+            shootBtn.click(function () {
+                if (time <= 3) {
+                    sum = sum + 3
+                } else {
+                    sum = sum + 2
+                }
+                console.log('ok')
+
+                console.log(sum)
+                clickTimes.text(sum)
+            })
+
+            raestBtn.click(function () {
+                closeBtn.hide()
+                startBtn.show()
+                time = 6
+                sum = 0
+                clickTimes.text(sum)
+            })
+
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>
